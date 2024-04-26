@@ -1,0 +1,88 @@
+{
+	"LocVersion" : "1.0",
+	"LocUse" : true,
+	"LocServer" : 
+		{
+		 "IP" : "192.168.49.101",
+		 "Port" : 3002
+		},
+	"LocClient" : [
+		{
+		 "ID" : 1,
+		 "IP" : "192.168.49.253",
+		 "Port" : 8101
+		}
+	],
+	"NetProto" :
+		{
+		 "Version" : "1.0",
+		 "Format" : 
+		 	{
+			 "Framed" : false,
+			 "Ascii" : true
+		 	},
+		 "Header" :
+			{
+			 "ServerMask" : "R",
+			 "ClientMask" : "N",
+			 "ServerId" : 1,
+			 "ClientId" : 1
+			}
+		},
+	"Mapping" :
+		{
+		 "Resolution" : 0.2,
+		 "MappingDataSetSize" : 50000,
+		 "LocalizeDataSetSize" : 1000
+		},
+	"CAN" :
+		{
+		 "Activation" : false
+		},
+	"Gyro" :
+		{
+		 "Enable" : true,
+		 "Remote" : true
+		},
+	"TopVision" :
+		{
+		 "Enable" : false
+		},
+	"Filter" :
+		{
+		 "Enable" : true,
+		 "Factor" : [0.25, 0.25, 0.25, 0.25]
+		},
+	"Evaluate" :
+		{
+		 "MinQualityLevel" : 30,
+		 "MinMatchNum" : 20,
+		 "LocGoodKeepDist" : 0.1,
+		 "LocErrorTolerateDist" : 0.5,
+		 "LocFailTolerateDist" : 0.3
+		},
+	"SyncTime" :
+		{
+		 "RobotEnd" :
+			{
+			 "Enable" : true,
+			 "Remote" : true,
+			 "CycleTime" : 60000,
+			 "TolerateSpan" : 30,
+			 "Timeout" : 1800000
+			},
+		 "SensorEnd" :
+			{
+			 "Enable" : false
+			}
+		},
+	"Diagnosis" :
+		{
+		 "UseCoreDump" : false,
+		 "AutoSaveLog" : true,
+		 "PublishPointCloud" : false,
+		 "PublishNdtCell" : false,
+		 "PublishReflector" : false,
+		 "HttpServerFlag" : true
+		}
+}

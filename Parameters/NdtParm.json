@@ -1,0 +1,20 @@
+{
+   "Ndt" :
+      {
+         "ndtThreshNum" : 5,
+         "ndt1ThreshRate" : 0.5,
+         "ndt2ThreshRate" : 0.6
+      },
+
+   "Corridor" :
+      {
+         "Enable" : true,
+         "DistanceLimit" : 20000
+      },
+
+   "OnlyNdt1" :
+      {
+         "Enable" : true,
+         "MinNumLimit" : 10
+      }
+}

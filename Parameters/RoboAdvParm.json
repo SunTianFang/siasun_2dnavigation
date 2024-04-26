@@ -1,0 +1,32 @@
+{
+	"AdvVersion" : "1.0",
+	"LocalizeExpand" : 
+			{
+		 	 "UseInInitPose" : false,
+		 	 "UseInPathTracing" : false,
+			 "UnitDistance" : 0.8,
+			 "UnitAngle" : 6.0,
+			 "RangeDistance" : 2.5,
+			 "RangeAngle" : 30.0,
+			 "ThresholdCount" : 10,
+			 "ThresholdRatio" : 0.6,
+			 "ConsistencyDistance" : 0.4,
+			 "ConsistencyCount" : 5
+			},
+	"LocalizeOru" : 
+			{
+			 "ThresholdCount" : 10,
+			 "ThresholdRatio" : 0.5,
+			 "ConsistencyTranslationX" : 0.3,
+			 "ConsistencyTranslationY" : 0.3,
+			 "ConsistencyRotationZ" : 20.0
+			},
+	"LocalizeOmp" : 
+			{
+			 "ThresholdCount" : 5,
+			 "ThresholdRatio" : 0.6,
+			 "ConsistencyTranslationX" : 0.6,
+			 "ConsistencyTranslationY" : 0.6,
+			 "ConsistencyRotationZ" : 30.0
+			}
+}

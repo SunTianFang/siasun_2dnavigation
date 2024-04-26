@@ -1,0 +1,75 @@
+model_1:
+   name: H型物体
+   type: polygon
+   points: [-0.2, 0.2, 0.2, 0.2, 0.2, 0.1, 0.1, 0.1, 0.1, -0.1, 0.2, -0.1, 0.2, -0.2, -0.2, -0.2, -0.2, -0.1, -0.1, -0.1, -0.1, 0.1, -0.2, 0.1]
+
+model_2:
+   name: U型物体
+   type: polygon
+   points: [-0.2, 0.2, -0.1, 0.2, -0.1, 0, 0.1, 0, 0.1, 0.2, 0.2, 0.2, 0.2, -0.2, -0.2, -0.2]
+
+model_3:
+   name: 圆型物体
+   type: circle
+   center: [0.0, 0.0]
+   radius: 0.4
+
+model_4:
+   name: 小圆
+   type: circle
+   center: [0.0, 0.0]
+   radius: 0.1
+
+model_5:
+    name: 复合物体
+    type: complex
+    objects: [U型物体, 小圆]
+    poses: [0, 0 , 0, 0, 0.5, 0]
+
+model_6:
+    name: V型物体
+    type: polyline
+    points: [-1.2, 1.2, 0.0, 0.0, 1.2, 1.2]
+
+model_7:
+    name: 0.5直线
+    type: polyline
+    points: [-0.25, 0.0, 0.0, 0.0, 0.25, 0.0]
+
+model_8:
+    name: 0.66直线
+    type: polyline
+    points: [-0.33, 0.0, 0.0, 0.0, 0.33, 0.0]
+
+model_9:
+    name: 0.3直线
+    type: polyline
+    points: [-0.15, 0.0, 0.0, 0.0, 0.15, 0.0]
+
+model_10:
+    name: 0.325直线
+    type: polyline
+    points: [-0.162, 0.0, 0.0, 0.0, 0.162, 0.0]
+
+model_11:
+    name: 0.285直线
+    type: polyline
+    points: [-0.142, 0.0, 0.0, 0.0, 0.142, 0.0]
+
+model_12:
+    name: 0.415直线
+    type: polyline
+    points: [-0.207, 0.0, 0.0, 0.0, 0.207, 0.0]
+
+model_13:
+    name: 0.193直线
+    type: polyline
+    points: [-0.097, 0.0, 0.0, 0.0, 0.097, 0.0]
+
+model_14:
+    name: 一体机模板
+    type: polyline
+    points: [-0.2284,-0.0948,-0.1719,-0.0948,-0.078,0.0,0.078,0.0,0.1719,-0.0948,0.2284,-0.0948]
+
+
+

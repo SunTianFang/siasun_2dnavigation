@@ -1,0 +1,17 @@
+{
+	"LocVersion" : "1.0",
+	"LocUse" : true,
+	"LocQuality" : 
+		{
+		 "MatchRatioWithMap" : 0.3,
+		 "MatchRatioWithLaserPt" : 0.3
+		},
+	"FastMatchRange" : 
+		{
+		 "LinearSearchWindow" : 0.5,
+		 "AngleSearchWindow" :  30.0,
+		 "FastMatchMinScore" : 0.35,
+		 "Reloc_LinearSearchWindow" : 2,
+		 "Reloc_AngleSearchWindow" :  60.0
+		}
+}

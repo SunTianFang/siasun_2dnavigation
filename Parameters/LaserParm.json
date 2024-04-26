@@ -1,0 +1,47 @@
+{
+   "laser" : [
+      {
+         "EndAngle" : 137.5,
+         "IP" : "192.168.49.110",
+	 "hostIP":"192.168.49.253",
+         "LaserCount" : 1650,
+         "LaserProductor" : 5,
+         "StartAngle" : -137.5,
+         "State" : true,
+	 "MaxRange" : 39.0,
+         "MinRange" : 0.6,
+         "criteritonThreshold":2500,
+         "VisualRange" : [
+            {
+               "VisualAngleEnd" : 135.0,
+               "VisualAngleStart" : -135.0
+            }
+         ],
+         "thita" : 359.7000,
+         "x" : 0.4109,
+         "y" : 0.0027
+      },
+	{
+         "EndAngle" : 137.5,
+         "IP" : "192.168.49.111",
+	 "hostIP":"192.168.49.253",
+         "LaserCount" : 1650,
+         "LaserProductor" : 5,
+         "StartAngle" : -137.5,
+         "State" : false,
+	 "MaxRange" : 30.0,
+         "MinRange" : 0.1,
+         "criteritonThreshold":2500,
+         "VisualRange" : [
+            {
+               "VisualAngleEnd" : 90.0,
+               "VisualAngleStart" : -90.0
+            }
+         ],
+         "thita" : 179.9581,
+         "x" : -0.4254,
+         "y" : 0.0019
+      }
+   ],
+   "version" : 210
+}

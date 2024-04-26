@@ -1,0 +1,47 @@
+{
+	"LocVersion" : "1.0",
+	"ClientParm" :
+		{
+		 "LaserRange" : 
+		 	{
+			 "Min" : 0.3,
+			 "Max" : 25
+		 	},
+		 "LoopClosure" :
+			{
+			 "SubmapNodeNum" : 90,
+			 "LinearWindows" : 5,
+			 "AngularWindows" : 30,
+			 "MaxDis" : 15,
+			 "MinScore" : 0.55
+			},
+		 "MotionFilter" :
+			{
+			 "MaxDis" : 0.0,
+			 "MaxAng" : 0.0,
+			 "MaxTime" : 30
+			},
+		 "Optimize" :
+			{
+			 "EveryXNode" : 90,
+			 "EnableOdom" : false 
+			}
+		},
+	"DeveloperParm" :
+		{
+		 "Odom" :
+			{
+		 	 "Enable" : true,
+			 "TransWeight" : 100000,
+			 "RotWeight" : 100000
+			},
+		 "ScanMatch" :
+			{
+		 	 "Enable" : true,
+			 "LinearWindows" : 0.1,
+			 "AngularWindows" : 15,
+			 "TransDeltaCostWeight" : 0.1,
+			 "RotDeltaCostWeight" : 0.1
+			}
+		}
+}

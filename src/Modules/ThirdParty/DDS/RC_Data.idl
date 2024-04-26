@@ -1,0 +1,8 @@
+
+struct RCData
+{
+    unsigned long long  seq;
+    long                key;
+    string              version;
+    sequence <char>     data;
+};

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Nav_ThirdParty"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\Modules\;CMake Files\src\Modules\ThirdParty\;CMake Files\src\Modules\Tools\;CMake Files\src\Modules\Geometry\;CMake Files\src\Modules\Csm\;CMake Files\src\Modules\Scan\;CMake Files\src\Modules\NavBase\;CMake Files\src\Modules\Methods\;CMake Files\src\Modules\Diagnosis\;CMake Files\src\Modules\SoftPls\;CMake Files\src\App\;CMake Files\src\App\NavApp\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/build/src/Modules/ThirdParty"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v all"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Nav_ThirdParty">
+				<Option output="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/build/release/libNav_ThirdParty.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/build/src/Modules/ThirdParty"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add option="-D_LINUX64"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/jsoncpp/include"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/jsoncpp"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/jsoncpp/src/lib_json"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/include"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/include"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/include/yaml-cpp/node"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/include/yaml-cpp/node/detail"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/include/yaml-cpp"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/include/yaml-cpp/contrib"/>
+					<Add directory="/opt/Mrc3588/glib/include/glib-2.0"/>
+					<Add directory="/opt/Mrc3588/glib/include"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/./DDS/include"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Diagnosis/include"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Scan/include"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Tools/include"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Geometry/include"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Csm/include"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Csm/include/csm"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Csm/src/csm"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/eigen3"/>
+					<Add directory="/opt/Mrc3588/sysrootnew/usr/local/include"/>
+					<Add directory="/opt/Mrc3588/boost/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v Nav_ThirdParty"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Nav_ThirdParty/fast">
+				<Option output="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/build/release/libNav_ThirdParty.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/build/src/Modules/ThirdParty"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add option="-D_LINUX64"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/jsoncpp/include"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/jsoncpp"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/jsoncpp/src/lib_json"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/include"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/include"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/include/yaml-cpp/node"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/include/yaml-cpp/node/detail"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/include/yaml-cpp"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/include/yaml-cpp/contrib"/>
+					<Add directory="/opt/Mrc3588/glib/include/glib-2.0"/>
+					<Add directory="/opt/Mrc3588/glib/include"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/./DDS/include"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Diagnosis/include"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Scan/include"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Tools/include"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Geometry/include"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Csm/include"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Csm/include/csm"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Csm/src/csm"/>
+					<Add directory="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/eigen3"/>
+					<Add directory="/opt/Mrc3588/sysrootnew/usr/local/include"/>
+					<Add directory="/opt/Mrc3588/boost/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v Nav_ThirdParty/fast"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/DDS/src/DDS_Data.cxx">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/DDS/src/DDS_DataPubSubTypes.cxx">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/DDS/src/MySubscriber.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/jsoncpp/src/lib_json/json_reader.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/jsoncpp/src/lib_json/json_value.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/jsoncpp/src/lib_json/json_valueiterator.inl">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/jsoncpp/src/lib_json/json_writer.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/channel_port_map_update_t.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/channel_to_port_t.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/eventlog.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/lcm.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/lcm_file.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/lcm_memq.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/lcm_mpudpm.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/lcm_tcpq.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/lcm_udpm.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/ringbuffer.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/udpm_util.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/exceptions.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/memory.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/node_data.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Modules\ThirdParty\"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/Tools/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Modules\Tools\"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Modules\Geometry\"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Modules\Csm\"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Modules\Scan\"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Modules\NavBase\"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Modules\Methods\"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Modules\Diagnosis\"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Modules\SoftPls\"/>
+		</Unit>
+		<Unit filename="/home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\App\NavApp\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
