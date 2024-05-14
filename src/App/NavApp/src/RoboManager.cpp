@@ -16,6 +16,8 @@
 #include "Calibrate.h"
 
 
+#include "RecTopvisionImage.h"
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #undef THIS_FILE
@@ -544,7 +546,7 @@ bool CRoboManager::StartAutoMapping()
     auto pLocalize = LocalizeFactorySingleton::GetInstance();
     CStampedPos curPos = pLocalize->GetCurPose();
 
-std::cout << "curPos "<<curPos.x<<" "<<curPos.y<<" "<<curPos.fThita<<std::endl;
+
     Pose pos{curPos.x,curPos.y,curPos.fThita};
 
     pAutoMapping->SetInitPos(pos);

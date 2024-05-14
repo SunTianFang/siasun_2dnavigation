@@ -47,7 +47,7 @@ extern CBlackBox LocBox;
 //  by  lishen
 //
 
-static int cccc = 0;
+
 void* LaserAutoMappingSupportProc(LPVOID pParam)
 {
     int time_diff  = 0;     // 每次循环执行时间
@@ -1028,7 +1028,7 @@ bool CLaserAutoMapping::StartMapping()
              std::cout<<"Test!!! "<<i<<" / 10"<<std::endl;
          }
      }
-     cccc = 0;
+
     // Start the support procedure
     pthread_attr_t attr;
     SetPthreadPriority(SCHED_RR ,THREAD_PRIORITY_NORMAL, attr);
@@ -1288,13 +1288,13 @@ void CLaserAutoMapping::SlamMappingReset(void)
     std::lock_guard<std::mutex> lock(build_mtx);
     usleep(1000);
 
-     std::cout<<"SlamMappingReset 1"<<std::endl;
+
 
     m_pCartoSlam->Reset();
 
     m_status = Mapping_STAND_BY;
 
-     std::cout<<"SlamMappingReset 2"<<std::endl;
+
     //切换到定位模式
 #ifdef NAV_APP
     auto pLocalize = LocalizeFactorySingleton::GetInstance();
@@ -1434,10 +1434,6 @@ bool CLaserAutoMapping::CancelSaveMap()
    map<int,sensor::CRawScan>().swap(m_rawScans);
    malloc_trim(0);
 
-    // reset carto
-    pthread_t tid;
-    m_SetPose = false;
-    pthread_create(&tid, NULL, ResetCartoSlam, this);
 
 
     std::cout<<"cancel save over"<<std::endl;
@@ -1461,6 +1457,13 @@ bool CLaserAutoMapping::CancelSaveMap()
        usleep(2000*1000);
 
    }
+
+
+   // reset carto
+   pthread_t tid;
+   m_SetPose = false;
+   pthread_create(&tid, NULL, ResetCartoSlam, this);
+
    /*while(1)
    {
       std::cout<<"pRoboClnt->GetCamMode(): "<<pRoboClnt->GetCamMode()<<std::endl;

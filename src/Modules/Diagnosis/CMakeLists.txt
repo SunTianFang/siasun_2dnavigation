@@ -47,6 +47,8 @@ include_directories(include/
     ../ThirdParty/jsoncpp/include
     ../ThirdParty/lcm/include
     ../ThirdParty/DDS/include
+    ../ThirdParty/yaml-cpp/include/yaml-cpp
+    ../ThirdParty/yaml-cpp/include
     ../NavBase/Mapping/include
     )
 

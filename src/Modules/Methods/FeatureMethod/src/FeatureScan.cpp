@@ -238,7 +238,7 @@ bool CFeatureScan::CreateLegFeatures()
     int Num = 0;
     m_ptReflectors.clear();
     m_ptHighBrightPnt.clear();
-    std::cout << "By Sam: 4" << std::endl;
+
     std::cout << "By Sam: m_nCount = " << m_nCount << std::endl;
     for(int i = 0; i < (m_nCount-1); i++)
     {
@@ -246,13 +246,18 @@ bool CFeatureScan::CreateLegFeatures()
         int Criteriton = 254;
 
         if(m_pPoints[i].m_nIntensity < Criteriton && m_pPoints[i + 1].m_nIntensity >= Criteriton)
-            LeadEdge = i;
+        {
+             LeadEdge = i;
+        }
         if(m_pPoints[i].m_nIntensity >= Criteriton && m_pPoints[i + 1].m_nIntensity < Criteriton)
         {
             PostEdge = i;
+
             if(LeadEdge != 0 && PostEdge != 0 && PostEdge > LeadEdge)
             {
                 Num = PostEdge - LeadEdge;
+
+
                 if(Num > FeatureParam->refEfficientPointCount)
                 {
                     float x_sum = 0.0;            // 平面直角坐标X位置
@@ -292,7 +297,7 @@ bool CFeatureScan::CreateLegFeatures()
                         m_ptReflectors.back().a = CAngle::NormAngle2(ang.m_fRad);
                         continue;
                     }
-
+                    //  std::cout<<"m_pReflectors.r = "<<m_pReflectors.r<<std::endl;
                     if(m_pReflectors.r < FeatureParam->maxRange && m_pReflectors.r > FeatureParam->minRange)
                     {
                         m_ptReflectors.push_back(m_pReflectors);
@@ -302,6 +307,8 @@ bool CFeatureScan::CreateLegFeatures()
             }
         }
     }
+
+   // std::cout<<"m_ptReflectors size = "<<m_ptReflectors.size()<<std::endl;
     return true;
 }
 

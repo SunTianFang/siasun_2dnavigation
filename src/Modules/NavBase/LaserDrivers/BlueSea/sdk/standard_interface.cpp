@@ -65,7 +65,21 @@ int BlueSeaLidarSDK::addUDPLidar(const char *device_name,const int port)
     cfg->runscript.type[sizeof(cfg->runscript.type) - 1] = '\0'; // 添加字符串结尾的空字符
 
 //    cfg->runscript.type = "udp";
-    cfg->runscript.local_port = 6668;
+    //cfg->runscript.local_port = 6668;
+
+
+    if(port == 6543)
+       {
+          cfg->runscript.local_port = 6668;
+
+       }else if(port == 6540)
+       {
+         cfg->runscript.local_port = 6888;
+       }
+//    cfg->runscript.local_port = 6668;
+
+
+
     cfg->runscript.is_group_listener = 0;
     strncpy(cfg->runscript.group_ip, "224.0.0.99", sizeof(cfg->runscript.group_ip) - 1);
     cfg->runscript.group_ip[sizeof(cfg->runscript.group_ip) - 1] = '\0'; // 添加字符串结尾的空字符

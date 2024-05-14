@@ -106,7 +106,7 @@ void CPlsManager::SendData()
     for(it = m_LaserMap.begin(); it != m_LaserMap.end();it++)
     {
         m_ObstacleResult[it->first] = it->second.GetSpeedType();
-        //printf("CPlsManager::SendData() %s, %d,m_LayerSetting %d\n",it->first.c_str(),m_ObstacleResult[it->first],m_LayerSetting[it->first]);
+      //  printf("CPlsManager::SendData() %s, %d,m_LayerSetting %d\n",it->first.c_str(),m_ObstacleResult[it->first],m_LayerSetting[it->first]);
         pRoboClnt->UpdatePlsState(it->first,m_LayerSetting[it->first],m_ObstacleResult[it->first],it->second.GetWorkState(),it->second.GetKey());
     }
 }
@@ -130,6 +130,8 @@ bool CPlsManager::GetParamByJson()
     std::ifstream initFile(WORK_PATH"SoftPlsParam.json");
     if (!initFile)
     {
+        std::cout<<"  GetParamByJson  can not open file  SoftPlsParam.json "<<std::endl;
+
 #ifdef USE_BLACK_BOX
          FILE_BlackBox(LaserBox, "GetParamByJson  can not open file path :",WORK_PATH,"SoftPlsParam.json");
 #endif
@@ -142,6 +144,8 @@ bool CPlsManager::GetParamByJson()
     {
         CAvoidObstacle avoid;
         std::string IP = root[d]["IP"].asString();
+
+
         for (int i = 0; i < root[d]["pls"].size(); i++)
         {
             int num = root[d]["pls"][i]["index"].asInt();
@@ -186,7 +190,7 @@ bool CPlsManager::GetParamByJson()
             if (!root[d]["pls"][i]["param"].isNull())
             {
                  tempParam.centerDetectionPeriod = root[d]["pls"][i]["param"]["centerperiod"].asInt();
-                 tempParam.stopDetectionPeriod = root[d]["pls"][i]["param"]["stopperiod"].asInt();
+                 tempParam.stopDetectionPeriod = root[d]["pls"][i]["param"]["stopperiod"].asInt();               
                  tempParam.warningDetectionPeriod = root[d]["pls"][i]["param"]["warningperiod"].asInt();
                  tempParam.centerPointNum = root[d]["pls"][i]["param"]["centerpointnum"].asInt();
                  tempParam.stopPointNum = root[d]["pls"][i]["param"]["stoppointnum"].asInt();
@@ -203,7 +207,7 @@ bool CPlsManager::GetParamByJson()
 
 void CPlsManager::SetLaserLayer(std::string ip,int layer,unsigned int key)
 {
-    //printf("CPlsManager::SetLaserLayer ip %s,layer %d\n",ip.c_str(),layer);
+   // printf("CPlsManager::SetLaserLayer ip %s,layer %d\n",ip.c_str(),layer);
     m_LaserMap[ip].SetKey(key);
     if(m_LaserMap[ip].SetAreaLayer(layer))
     {

@@ -21,6 +21,7 @@ CLaserScannerParam::CLaserScannerParam()
 //    strIP_c[15] = {0};
   strIP = "";
     hostIP = "";
+    g_bLaserUnInverted = false; // 默认值为 false
 }
 
 //

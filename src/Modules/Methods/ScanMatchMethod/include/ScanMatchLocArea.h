@@ -26,6 +26,9 @@ class DllExport CScanMatchParam : public CLocalizationParam
     double  m_reloc_angularSearchWindow ;    // 重定位分支限界角度搜索范围
     double  m_scoreFastMatch;          //分支限界成功最小成绩
     int  m_localMode;              // 0-正常模式 1-单点模式x 2-单点模式y 3-长廊模式x 4-长廊模式y
+
+    int  m_topVisionMode;
+
     double  m_bUseSingleFeature;
 
   public:

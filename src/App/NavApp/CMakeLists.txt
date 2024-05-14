@@ -229,10 +229,10 @@ if(PLATFORM_MRC3588)
         libpcl_kdtree.so     libpcl_registration.so      libpcl_keypoints.so
         /lib/aarch64-linux-gnu/libc.so
 
-        /home/sft/2dnavigation/MappingNavigation_3.0.4test/Parameters/libFeature.so
-        /home/sft/2dnavigation/MappingNavigation_3.0.4test/Parameters/libndt_oru.so
-        /home/sft/2dnavigation/MappingNavigation_3.0.4test/Parameters/libndt_omp.so
-        /home/sft/2dnavigation/MappingNavigation_3.0.4test/Parameters/libCarto.so
+        /home/sft/test_new/MappingNavigation_3.0.4test/Parameters/libFeature.so
+        /home/sft/test_new/MappingNavigation_3.0.4test/Parameters/libndt_oru.so
+        /home/sft/test_new/MappingNavigation_3.0.4test/Parameters/libndt_omp.so
+        /home/sft/test_new/MappingNavigation_3.0.4test/Parameters/libCarto.so
 
 #        /opt/Mrc3588/Mrc05Sdk/sysroot/usr/lib/aarch64-linux-gnu/libc.so.6
 #        /opt/Mrc3588/Mrc05Sdk/sysroot/usr/lib/aarch64-linux-gnu/libm.so

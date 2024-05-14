@@ -1536,7 +1536,7 @@ int CRoboLocClnt::GetPlsLayer(string ip,unsigned int& key)
 }
 void CRoboLocClnt::UpdatePlsState(string ip,int layer,int state,int workstate,unsigned int key)
 {
-     //printf("CRoboLocClnt::UpdatePlsState %s, %d\n",ip.c_str(),state);
+  //  printf("CRoboLocClnt::UpdatePlsState %s, %d\n",ip.c_str(),state);
     std::lock_guard<std::mutex> lock(pls_data_mtx);
     for(int i = 0; i < pslData.size();i++)
     {

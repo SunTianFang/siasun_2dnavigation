@@ -1,4 +1,4 @@
-# Install script for directory: /home/lishen/2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry
+# Install script for directory: /home/sft/test_new/MappingNavigation_3.0.4test/src/Modules/Geometry
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,10 +35,5 @@ endif()
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
-endif()
-
-# Set default install directory permissions.
-if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-objdump")
 endif()
 

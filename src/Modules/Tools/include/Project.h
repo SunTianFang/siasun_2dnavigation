@@ -6,7 +6,7 @@
 #define __PROJECT
 #include"LinuxSetting.h"
 
-#define VER_IN_BLACKBOX		"3.1.1_test"
+#define VER_IN_BLACKBOX		"3.1.1.3_b"
 #define AGV_SOFTWARE_VER          (VER_IN_BLACKBOX)
 #define DATE_OF_RELEASE           (__DATE__)
 #define TIME_OF_RELEASE           (__TIME__)

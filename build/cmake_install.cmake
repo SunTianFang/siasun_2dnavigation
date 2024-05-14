@@ -1,4 +1,4 @@
-# Install script for directory: /home/lishen/2dnavigation/MappingNavigation_3.0.4test
+# Install script for directory: /home/sft/test_new/MappingNavigation_3.0.4test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -37,23 +37,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-# Set default install directory permissions.
-if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/aarch64-linux-gnu-objdump")
-endif()
-
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/lishen/2dnavigation/MappingNavigation_3.0.4test/build/src/Modules/ThirdParty/cmake_install.cmake")
-  include("/home/lishen/2dnavigation/MappingNavigation_3.0.4test/build/src/Modules/Tools/cmake_install.cmake")
-  include("/home/lishen/2dnavigation/MappingNavigation_3.0.4test/build/src/Modules/Geometry/cmake_install.cmake")
-  include("/home/lishen/2dnavigation/MappingNavigation_3.0.4test/build/src/Modules/Csm/cmake_install.cmake")
-  include("/home/lishen/2dnavigation/MappingNavigation_3.0.4test/build/src/Modules/Scan/cmake_install.cmake")
-  include("/home/lishen/2dnavigation/MappingNavigation_3.0.4test/build/src/Modules/NavBase/cmake_install.cmake")
-  include("/home/lishen/2dnavigation/MappingNavigation_3.0.4test/build/src/Modules/Methods/cmake_install.cmake")
-  include("/home/lishen/2dnavigation/MappingNavigation_3.0.4test/build/src/Modules/Diagnosis/cmake_install.cmake")
-  include("/home/lishen/2dnavigation/MappingNavigation_3.0.4test/build/src/Modules/SoftPls/cmake_install.cmake")
-  include("/home/lishen/2dnavigation/MappingNavigation_3.0.4test/build/src/App/NavApp/cmake_install.cmake")
+  include("/home/sft/test_new/MappingNavigation_3.0.4test/build/src/Modules/ThirdParty/cmake_install.cmake")
+  include("/home/sft/test_new/MappingNavigation_3.0.4test/build/src/Modules/Tools/cmake_install.cmake")
+  include("/home/sft/test_new/MappingNavigation_3.0.4test/build/src/Modules/Geometry/cmake_install.cmake")
+  include("/home/sft/test_new/MappingNavigation_3.0.4test/build/src/Modules/Csm/cmake_install.cmake")
+  include("/home/sft/test_new/MappingNavigation_3.0.4test/build/src/Modules/Scan/cmake_install.cmake")
+  include("/home/sft/test_new/MappingNavigation_3.0.4test/build/src/Modules/NavBase/cmake_install.cmake")
+  include("/home/sft/test_new/MappingNavigation_3.0.4test/build/src/Modules/Methods/cmake_install.cmake")
+  include("/home/sft/test_new/MappingNavigation_3.0.4test/build/src/Modules/Diagnosis/cmake_install.cmake")
+  include("/home/sft/test_new/MappingNavigation_3.0.4test/build/src/Modules/SoftPls/cmake_install.cmake")
+  include("/home/sft/test_new/MappingNavigation_3.0.4test/build/src/App/NavApp/cmake_install.cmake")
 
 endif()
 
@@ -65,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/lishen/2dnavigation/MappingNavigation_3.0.4test/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/sft/test_new/MappingNavigation_3.0.4test/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

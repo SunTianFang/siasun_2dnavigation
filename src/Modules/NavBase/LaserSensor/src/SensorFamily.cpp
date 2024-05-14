@@ -138,6 +138,13 @@ bool CSensorFamily::LoadLaserParam()
                 parm->m_fMinRange = LaserParmRoot["laser"][i]["MinRange"].asDouble();
             }
 
+            if(!LaserParmRoot["laser"][i]["LaserUnInverted"].isNull()){
+                 parm->g_bLaserUnInverted = LaserParmRoot["laser"][i]["LaserUnInverted"].asBool();
+             } else {
+                 // 处理空值的逻辑，例如设置一个默认值
+                 parm->g_bLaserUnInverted = false; // 默认值为 false
+             }
+
             int nRangeCount = 0;
             float fRange[2] = {0.0};
             if (!LaserParmRoot["laser"][i]["VisualRange"].isNull()) {
@@ -162,6 +169,7 @@ bool CSensorFamily::LoadLaserParam()
                 CDataRange range(fRange[0], fRange[1]);
                 parm->m_AppAngleRange.push_back(range);
             }
+
 
             if(i == 0){
                 GData::getObj().front_laser_state = int(parm->state);
@@ -394,7 +402,6 @@ bool CSensorFamily::Initialize()
             cLDS_50LaserScanner* pScanner_LDS = new cLDS_50LaserScanner(sensor_family[i]->parm->m_nLineCount,
                                                                          sensor_family[i]->parm->m_fStartAngle,
                                                                          sensor_family[i]->parm->m_fEndAngle,
-                                                                         LDS_50,
                                                                          sensor_family[i]->parm);
             if(pScanner_LDS == NULL) {
                 bRet = false;
@@ -405,11 +412,10 @@ bool CSensorFamily::Initialize()
         }
         case LDS_E320_S:
         {
-            cLDS_50LaserScanner* pScanner_LDS = new cLDS_50LaserScanner(sensor_family[i]->parm->m_nLineCount,
+            cLDS_E320LaserScanner* pScanner_LDS = new cLDS_E320LaserScanner(sensor_family[i]->parm->m_nLineCount,
                                                                          sensor_family[i]->parm->m_fStartAngle,
-                                                                         sensor_family[i]->parm->m_fEndAngle,
-                                                                         LDS_E320_S,
-                                                                         sensor_family[i]->parm);
+                                                                         sensor_family[i]->parm->m_fEndAngle,                                                               
+                                                                        sensor_family[i]->parm);
             if(pScanner_LDS == NULL) {
                 bRet = false;
                 continue;

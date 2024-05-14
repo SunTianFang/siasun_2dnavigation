@@ -21,8 +21,17 @@
 #include"StampedPos.h"
 #include "Diagnosis.h"
 
+#include "RecTopvisionImage.h"
+
 
 namespace robo {
+
+
+enum {
+    ONLY_LASER_LOCALIZATION,
+    ONLY_TOPVISION_LOCALIZATION,
+    LASER_WITH_TOPVISION_LOCALIZATION
+};
 
 struct RegionType
 {
@@ -199,7 +208,10 @@ private:
     unsigned int   m_nSlideDataCount_Cam;
     std::mutex     cloud_mtx;                    // 点云回调函数锁
 
+    bool           m_bRecordImg;
 
+    int            m_topVisionMode;              //融合顶视模式 0、不用顶视定位 1、只用顶视定位 2、激光融合顶视
+    int            m_topVisionDefaultMode;
 
 public:
     HANDLE     m_hLocKillThread;       // Handle of "Kill thread" event
@@ -284,7 +296,13 @@ public:
 
     CStampedPos GetCurPose(void);
 
-    bool LegLocalize(Eigen::Affine3d &estimatePose);   // By Sam For LegMethod
+    int LegLocalize(Eigen::Affine3d &estimatePose);   // By Sam For LegMethod
+
+    int StartRecordImage();
+
+    int StopRecordImage();
+
+    inline bool IsRecordingImage() { return m_bRecordImg;};
 
 
 private:

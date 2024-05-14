@@ -697,7 +697,7 @@ bool CRoboLocProto::ClntGetPos_Cam(CUdpChannel* pChannel, STPositionData& positi
     }
     // positionData_.uErrCode = (uchFlag == 0) ? 0:1;  //(0:failed 1:success)
     positionData_.uErrCode = uchFlag;
-    std::cout<<"\033[34;1mpositionData_.uErrCode: "<<positionData_.uErrCode<<"\033[0m"<<std::endl;
+ //   std::cout<<"\033[34;1mpositionData_.uErrCode: "<<positionData_.uErrCode<<"\033[0m"<<std::endl;
     // std::cout<<"positionData_.lRawTime : "<<positionData_.lRawTime<<std::endl;
     // positionData_.lRawTime = GetTickCount();
     // std::cout<<"positionData_.lRawTime111:  "<<positionData_.lRawTime<<std::endl;
@@ -1238,7 +1238,7 @@ bool CRoboLocProto::SrvSetPlsLayerDe(CUdpChannel* pChannel, STPlsLayer& plsLayer
     plsLayer_.laserIp = ip;
     *pChannel >> plsLayer_.chSetLayer;
     *pChannel >> plsLayer_.iKey;
-    printf("SrvSetPlsLayerDe ip %s,chSetLayer plsLayer_.chSetLayer %d,iKey %d\n",ip,plsLayer_.chSetLayer,plsLayer_.iKey);
+  //  printf("SrvSetPlsLayerDe ip %s,chSetLayer plsLayer_.chSetLayer %d,iKey %d\n",ip,plsLayer_.chSetLayer,plsLayer_.iKey);
     if (pChannel->CheckRxEnd())
     {
         printf("pChannel->CheckRxEnd() !!!!!!!!!!!!\n");
@@ -1269,6 +1269,7 @@ bool CRoboLocProto::ClntReportPlsStateSe(CUdpChannel* pChannel, STPlsData& plsDa
         *pChannel << plsData.vBaseData[i].chState;
         *pChannel << plsData.vBaseData[i].chWorkState;
         *pChannel << plsData.vBaseData[i].iKey;
+
     }
     pChannel->FinishTxPacket();
 

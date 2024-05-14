@@ -20,7 +20,8 @@
 #include "WJ719LaserScanner.h"
 #include "FRR2LaserScanner.h"
 #include "LeimouF30LaserScanner.h"
-#include "BlueSeaLaser.h"
+#include "BlueSeaLaser50c.h"
+#include "BlueSeaLaserE320.h"
 
 
 namespace sensor {

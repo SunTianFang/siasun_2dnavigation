@@ -23,6 +23,7 @@
 #include "DDSTask.h"
 
 
+
 #pragma GCC push_options
 #pragma GCC optimize ("O0")
 
@@ -54,7 +55,7 @@ bool b_initpos = false;
 
 // By Sam test
 Eigen::Affine3d legPose;
-bool legOK;
+int legOK;
 
 extern bool readJffFormat;
 
@@ -127,6 +128,11 @@ CLocalizeFactory::CLocalizeFactory()
     m_UnuseScanMatchMethod = true;//dq 11.28
     m_curFloorNo = 0;
     m_bFlagCameraLoc = false;
+
+    m_bRecordImg = false;
+
+    m_topVisionMode = 0;
+    m_topVisionDefaultMode = 0;
 }
 
 CLocalizeFactory::~CLocalizeFactory()
@@ -150,6 +156,42 @@ bool CLocalizeFactory::Create()
 
     return true;
 }
+int CLocalizeFactory::StartRecordImage()
+{
+    std::cout<<"*******************StartRecordImage******************"<<std::endl;
+
+    if(!m_bFlagCameraLoc)
+        return RECORDIMG_DISABLE;
+    auto pRecTvImg = CRecTopvisionImageSingleton::GetInstance();
+
+    int res = pRecTvImg->StartRecord();
+    if(res == RECORDIMG_START_SUCCESS )
+    {
+        m_bRecordImg = true;
+
+    }
+    return res;
+}
+
+int CLocalizeFactory::StopRecordImage()
+{
+    if(!m_bFlagCameraLoc)
+        return RECORDIMG_DISABLE;
+
+    if(m_bRecordImg)
+    {
+        auto pRecTvImg = CRecTopvisionImageSingleton::GetInstance();
+
+        int res =pRecTvImg->StopRecord();
+
+        m_bRecordImg = false;
+
+        return res;
+
+    }
+    return RECORDIMG_ISNOT_RECORDING;
+}
+
 
 void CLocalizeFactory::SetPose(double init_x, double init_y, double init_theta, unsigned long long init_raw_time)
 {
@@ -185,7 +227,7 @@ void CLocalizeFactory::SetPose(double init_x, double init_y, double init_theta, 
         m_yVar = 0.0;
         m_fThitaVar = 0.0;
 
-        if(m_bFlagCameraLoc)
+        if(m_bFlagCameraLoc  && (!m_bRecordImg))
         {
             m_nSlideDataCount_Cam = 0;
             m_RecentPoses_Cam.clear();
@@ -322,6 +364,8 @@ bool CLocalizeFactory::Initialize(bool simulate)
         pParameterObject->GetParameterValue("Diagnosis_PublishReflector", m_Diagnosis.publish_reflector);
 
         pParameterObject->GetParameterValue("TopVision_Enable", m_bFlagCameraLoc);
+        pParameterObject->GetParameterValue("TopVision_DefaultFusionMode", m_topVisionDefaultMode);
+
 
         std::cout<<"m_bFlagCameraLoc = "<<m_bFlagCameraLoc<<std::endl;
 
@@ -660,9 +704,9 @@ bool CLocalizeFactory::LocalizationProc()
         odom_data.velocity.fAngular = base_vel.Vtheta / 1000.0;
         odom_data.local_pst = odomTrans;
 
-    #ifdef USE_BLACK_BOX
-        FILE_BlackBox(LocBox, "Version:", VER_IN_BLACKBOX);
-    #endif
+//    #ifdef USE_BLACK_BOX
+//        FILE_BlackBox(LocBox, "Version:", VER_IN_BLACKBOX);
+//    #endif
 
         // point cloud
         auto pAFamily = SensorFamilySingleton::GetInstance();
@@ -703,7 +747,7 @@ bool CLocalizeFactory::LocalizationProc()
         if(!b_initpos)
         {
             SetPose(0.0f, 0.0f, 0.0f, GetTickCount());
-            if(m_bFlagCameraLoc)
+            if(m_bFlagCameraLoc && (!m_bRecordImg))
             {
                  // dq VISION set initpos
                  CLocDataSet init_pos_cam;
@@ -743,7 +787,7 @@ bool CLocalizeFactory::LocalizationProc()
     Eigen::Affine3d estimatePose_cam;
 
 
-    if(m_bFlagCameraLoc)
+    if(m_bFlagCameraLoc&& (!m_bRecordImg))
     {
         pRoboClnt->GetLocPosition_Cam(CamPose_Data);
         estimatePose_cam = PostureToAffine((float)CamPose_Data.nX/1000, (float)CamPose_Data.nY/1000, (float)CamPose_Data.nTheta/1000);
@@ -786,6 +830,13 @@ bool CLocalizeFactory::LocalizationProc()
     bool bSuccess = TransformRawScanToLaserMsg(firstScan);
 
 
+    if(m_bRecordImg)
+    {
+        auto pRecTvImg = CRecTopvisionImageSingleton::GetInstance();
+        pRecTvImg->RecordLaserAndPos(firstScan,m_PosNow);
+    }
+
+
     CMatchInfo* results = Localize(estimatePose);
 
     Eigen::Affine3d estimatePoseTemp;
@@ -820,7 +871,7 @@ bool CLocalizeFactory::LocalizationProc()
     estimatePose = estimatePose * TFromScan;
     estmPos = AffineToPosture(estimatePose);
 
-     if(m_bFlagCameraLoc)
+     if(m_bFlagCameraLoc&& (!m_bRecordImg))
      {
          CPosture odomTransInsert_cam;
          pOdometryInsert->GetLocalOdomTrans(CamPose_Data.lRawTime, tmSecond, odomTransInsert_cam);
@@ -838,7 +889,7 @@ bool CLocalizeFactory::LocalizationProc()
 //    else
 //        legPose = PostureToAffine(0, 0, 0);
 
-    if (!legOK)
+    if (legOK!=1)
         legPose = PostureToAffine(0, 0, 0);
 
 
@@ -920,7 +971,7 @@ bool CLocalizeFactory::LocalizationProc()
     FilterPose(stampedPosNow);    
     GetFilteredPose(filter_enable, pose_filtered);
 
-    if(m_bFlagCameraLoc)
+    if(m_bFlagCameraLoc&& (!m_bRecordImg))
     {
         FilterPose_Cam(stampedPosNow_cam);
         GetFilteredPose_Cam(filter_enable, pose_filtered_cam);
@@ -936,7 +987,7 @@ bool CLocalizeFactory::LocalizationProc()
     }
 
 
-    if(m_bFlagCameraLoc)
+    if(m_bFlagCameraLoc&& (!m_bRecordImg))
     {
         std::cout<<"************************ estmPos: "<<estmPos.x<<", "<<estmPos.y<<", "<<estmPos.fThita<<std::endl;
         std::cout<<"************************ estmPos_cam: "<<estmPos_cam.x<<", "<<estmPos_cam.y<<", "<<estmPos_cam.fThita<<std::endl;
@@ -1362,7 +1413,7 @@ bool CLocalizeFactory::DealWithLocResult(const CStampedPos& pose, const CStamped
     int legD_y = 0;
     int legD_theta = 0;
 
-    if (legOK)
+    if (legOK==1)
     {
         legErr = 1;
 
@@ -1375,6 +1426,8 @@ bool CLocalizeFactory::DealWithLocResult(const CStampedPos& pose, const CStamped
         legD_y = static_cast<int>(legDiffagv.y * 1000.0);
         legD_theta = static_cast<int>(legDiffagv.fThita * 1000.0);
     }
+    if(legOK==2)
+        legErr = 1;
 
    std::string strLocFucntion("Loc Fail");
    int iType = -1;
@@ -1672,6 +1725,19 @@ bool CLocalizeFactory::DealWithLocResult_Cam(CStampedPos& pose, const CStampedPo
             //r = 0.5*(1+tanh(1/(1-m_CamLocCount/m_MaxCamLocCount))-m_MaxCamLocCount/m_CamLocCount);
     }
 
+
+    if(m_topVisionMode == ONLY_TOPVISION_LOCALIZATION)
+    {
+        r = 1;
+#ifdef USE_BLACK_BOX
+    FILE_BlackBox(LocBox,"ONLY_TOPVISION_LOCALIZATION! ");
+#endif
+    }
+    if(m_topVisionMode == ONLY_LASER_LOCALIZATION)
+    {
+        r = 0;
+    }
+
     if(r > 1)
         r = 1;
     if(r < 0)
@@ -1708,7 +1774,7 @@ bool CLocalizeFactory::DealWithLocResult_Cam(CStampedPos& pose, const CStampedPo
         int legD_y = 0;
         int legD_theta = 0;
 
-        if (legOK)
+        if (legOK==1)
         {
             legErr = 1;
 
@@ -1721,7 +1787,8 @@ bool CLocalizeFactory::DealWithLocResult_Cam(CStampedPos& pose, const CStampedPo
             legD_y = static_cast<int>(legDiffagv.y * 1000.0);
             legD_theta = static_cast<int>(legDiffagv.fThita * 1000.0);
         }
-
+        if(legOK==2)
+            legErr = 1;
 
         if(match_fail){
            std::cout<<"match failed!"<<std::endl;
@@ -1747,7 +1814,7 @@ bool CLocalizeFactory::DealWithLocResult_Cam(CStampedPos& pose, const CStampedPo
         }
         else{
             std::cout<<"match successed! "<<std::endl;
-            if((uG > 30 && uN > 30))
+            if((uG > 30 && uN > 30) && (m_topVisionMode != ONLY_TOPVISION_LOCALIZATION))
             {
                 Setpos_cam.m_PositionData.nX = x_;
                 Setpos_cam.m_PositionData.nY = y_;
@@ -2483,6 +2550,8 @@ CMatchInfo *CLocalizeFactory::Localize(Eigen::Affine3d &estimatePose)
 
             CLocalizationInst &inst = locInst[i];
 
+            m_topVisionMode = m_topVisionDefaultMode;
+
             // 方法编号应为非负数，且不应超出最大的定位方法编号
             if (inst.methodId_ < 0 || inst.methodId_ > NUM_LOCALIZATION_METHODS - 1)
                 continue;           
@@ -2496,6 +2565,12 @@ CMatchInfo *CLocalizeFactory::Localize(Eigen::Affine3d &estimatePose)
             CLocalizationParam *param = static_cast<CLocalizationParam *>(inst.param_);
             if (param == NULL && (inst.methodId_ != 4 && inst.methodId_ != 3))
                 continue;
+
+            if(param != NULL && inst.methodId_ == 3)
+            {
+                CScanMatchParam *p = (CScanMatchParam*)param;
+                m_topVisionMode = p-> m_topVisionMode;
+            }
 
             if(!m_bInitLocSuccess && inst.methodId_==4)
             {
@@ -2531,6 +2606,8 @@ CMatchInfo *CLocalizeFactory::Localize(Eigen::Affine3d &estimatePose)
             method = methods_->at(3);
             maxUseMethodNum = 1;
             method->ApplyParam(NULL);
+            m_topVisionMode = m_topVisionDefaultMode;
+
         }
 
         // 进行定位
@@ -2685,7 +2762,7 @@ bool CLocalizeFactory::LegLocalize(Eigen::Affine3d &estimatePose)
 }*/
 
 
-bool CLocalizeFactory::LegLocalize(Eigen::Affine3d &estimatePose)
+int CLocalizeFactory::LegLocalize(Eigen::Affine3d &estimatePose)
 {
 
 
@@ -2693,7 +2770,10 @@ bool CLocalizeFactory::LegLocalize(Eigen::Affine3d &estimatePose)
     auto pRoboClnt = RoboClntSingleton::GetInstance();
     if(pRoboClnt)
         bReflectCharge = pRoboClnt->GetReflectChargeFlag();
-   std::cout<<"bReflectCharge     "<<bReflectCharge<<std::endl;
+
+   // std::cout<<"bReflectCharge     "<<bReflectCharge<<std::endl;
+
+
 
 
     if(bReflectCharge)
@@ -2724,10 +2804,7 @@ bool CLocalizeFactory::LegLocalize(Eigen::Affine3d &estimatePose)
 
         CRectangle  rect(*x_min, *y_max, *x_max, *y_min);
 
-
-
-        std::cout<<" rect     "<<*x_min<< " "<<*y_max<<" "<<*x_max<<" "<<*y_min<<std::endl;
-
+       // std::cout<<" rect     "<<*x_min<< " "<<*y_max<<" "<<*x_max<<" "<<*y_min<<std::endl;
 
         CFeatureLocalizationParam legparam;
         legparam.ratio = 60;
@@ -2772,14 +2849,14 @@ bool CLocalizeFactory::LegLocalize(Eigen::Affine3d &estimatePose)
         FILE_BlackBox(LocBox, "By Sam: Use LegMethod, Loc SUCCESS !!!");
     #endif
             legPose = estimatePose;
-            return true;
+            return 1;
         }
         else
         {
     #ifdef USE_BLACK_BOX
         FILE_BlackBox(LocBox, "By Sam: Use LegMethod, Loc FAILE !!!");
     #endif
-             return false;
+             return 2;
         }
     }
     else
@@ -2792,7 +2869,7 @@ bool CLocalizeFactory::LegLocalize(Eigen::Affine3d &estimatePose)
         ((CFeatureMethod *)methods_->at(1))->ReSetMethod();
         ((CTemplateMethod *)methods_->at(2))->ReSetMethod();
 
-        return false;
+        return 0;
     }
 
 }

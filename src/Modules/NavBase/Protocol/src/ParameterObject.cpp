@@ -53,7 +53,9 @@ bool ParameterObject::LoadRoboLocParm()
          AddParameter("TopVision_Enable", LocParmRoot["TopVision"]["Enable"].asBool());
     }
 
-
+    if (!LocParmRoot["TopVision"]["DefaultFusionMode"].isNull()) {
+         AddParameter("TopVision_DefaultFusionMode", LocParmRoot["TopVision"]["DefaultFusionMode"].asInt());
+    }
 
     // set the CAN parameters
     if (!LocParmRoot["CAN"]["Activation"].isNull()) {

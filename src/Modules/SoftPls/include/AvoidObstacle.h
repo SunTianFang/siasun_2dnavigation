@@ -47,7 +47,7 @@ class CAvoidObstacle
         }
         bool SetAreaLayer(int num)
         {
-            //printf("CAvoidObstacle SetAreaLayer num is %d\n",num);
+           // printf("CAvoidObstacle SetAreaLayer num is %d\n",num);
             if(num == 15)
             {
                 //m_bIsEnable = false;

@@ -1833,11 +1833,11 @@ int CFeatureLocalization::FeatureLocalizationUseSingleframe(CScan *pCurScan, CPo
             return FULL_MAP_ERROR_NO_MATCH;
 
         // 解算中心位置
-        std::cout << "By Sam: Reflector point size = " << m_LocalLayer.GetCount() << std::endl;
+        std::cout << "By Sam:  Reflector point size = " << m_LocalLayer.GetCount() << std::endl;
         if (m_LocalLayer.GetCount() >= 2)
         {
-           // PointFeatureFindLegPairs(0.335);  // By Sam: need add a param
-            PointFeatureFindLegPairs(0.445);
+            PointFeatureFindLegPairs(0.357);  // By Sam: need add a param
+            //PointFeatureFindLegPairs(0.44);
 
             return LocalizationByLeg(&pstNew);
         }

@@ -43,7 +43,11 @@ bool CAvoidObstacle::UpdateData(
    for( int i = 0; i < len; i++)
    {
       m_LaserData.push_back(data.at(i));
+
    }
+
+
+
    UpdateGetSpeedType();
    //pthread_mutex_unlock(&m_LaserData_mutex);
    return true;
@@ -52,7 +56,7 @@ bool CAvoidObstacle::UpdateData(
 void CAvoidObstacle::SupportRoutine()
 {
     auto pFamily = SensorFamilySingleton::GetInstance();
-    std::cout<<m_sLaserIP<<"CAvoidObstacle::SupportRoutine begin"<<std::endl;
+    //std::cout<<m_sLaserIP<<"CAvoidObstacle::SupportRoutine begin"<<std::endl;
     if(m_AreaMap.size() == 0)
     {
         printf("IP %s ,Do not have any area data!!!!!!!!!!!!!!!!!!\n",m_sLaserIP.c_str());
@@ -99,8 +103,19 @@ void CAvoidObstacle::SupportRoutine()
                             dis = 0.0;
                         }
 
+                       /* if(dis>0.01 && dis<300 )
+                        {
+                            if(scan->parm->m_AppAngleRange.size()>=0)
+                            {
+                                float from_ = scan->parm->m_AppAngleRange.at(0).from_;
+                                float to_ = scan->parm->m_AppAngleRange.at(0).to_;
 
-                        //printf("dis is %d,j is %d\n",dis,j);
+                                std::cout<<"from"<<from_<<std::endl;
+                                                                  std::cout<<"to_"<<to_<<std::endl;
+                            }
+
+                            printf("dis is %d,j is %d   a=%f\n",dis,j, a);
+                        }*/
                         data.push_back(dis);
                         intensity.push_back(500);
                     }
@@ -144,7 +159,7 @@ void CAvoidObstacle::UpdateGetSpeedType( void )
         }
         laser.x = m_LaserData[i]*cos(m_dStartTheta + m_dPreTheta*i);
         laser.y = m_LaserData[i]*sin(m_dStartTheta + m_dPreTheta*i);
-        //printf("UpdateGetSpeedType m_dStartTheta is %f,m_dPreTheta is %f,cos %f,sin %f,m_LaserData[i] %d,i %d,x %d,y %d\n",m_dStartTheta,m_dPreTheta,cos(m_dStartTheta + m_dPreTheta*i),sin(m_dStartTheta + m_dPreTheta*i),m_LaserData[i],i,laser.x,laser.y);
+      //  printf("UpdateGetSpeedType m_dStartTheta is %f,m_dPreTheta is %f,cos %f,sin %f,m_LaserData[i] %d,i %d,x %d,y %d\n",m_dStartTheta,m_dPreTheta,cos(m_dStartTheta + m_dPreTheta*i),sin(m_dStartTheta + m_dPreTheta*i),m_LaserData[i],i,laser.x,laser.y);
         Area_t tempArea = m_AreaMap[m_iAreaIndex];
         if(PointInPolygon(laser.x,laser.y,tempArea.WarningPointVector))
         {
@@ -152,17 +167,20 @@ void CAvoidObstacle::UpdateGetSpeedType( void )
         }
         if(PointInPolygon(laser.x,laser.y,tempArea.CenterPointVector))
         {
-           // printf("laser.x %d,laser.y %d i %d,m_LaserData[i] %d\n",laser.x,laser.y,i,m_LaserData[i]);
+           // printf("&&&&& laser.x %d,laser.y %d i %d,m_LaserData[i] %d\n",laser.x,laser.y,i,m_LaserData[i]);
             CenterCnt++;
         }
         if(PointInPolygon(laser.x,laser.y,tempArea.StopPointVector))
         {
-            //printf("laser.x %d,laser.y %d i %d,m_LaserData[i] %d\n",laser.x,laser.y,i,m_LaserData[i]);
+           // printf("#### laser.x %d,laser.y %d i %d,m_LaserData[i] %d\n",laser.x,laser.y,i,m_LaserData[i]);
             StopCnt++;
         }
     }
     unsigned long long timeNow = GetTickCount();
-  // printf("StopCnt %d,CenterCnt %d,WarningCnt %d,timeNow %lld,size %d,ip %s\n",StopCnt,CenterCnt,WarningCnt,timeNow,size,m_sLaserIP.c_str());
+  // printf("StopCnt %d,CenterCnt %d,WarningCnt %d,timeNow %lld,size %d,ip %s      %d\n",StopCnt,CenterCnt,WarningCnt,timeNow,size,m_sLaserIP.c_str(),m_param[m_iAreaIndex].stopDetectionPeriod);
+
+
+
 #ifdef USE_BLACK_BOX
     //FILE_BlackBox(LaserBox, "CAvoidObstacle::UpdateGetSpeedType",",layer is ",m_iAreaIndex,",StopCnt ",StopCnt,",CenterCnt",CenterCnt,",WarningCnt",WarningCnt);
 #endif

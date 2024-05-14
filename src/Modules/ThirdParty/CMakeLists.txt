@@ -22,6 +22,9 @@ include_directories(jsoncpp/include
     yaml-cpp/include/yaml-cpp/contrib
     )
 
+aux_source_directory(./yaml-cpp/src/ DIR_SRCS_YAML)
+
+
 set ( ThirdParty_SRCS
         jsoncpp/src/lib_json/json_reader.cpp
         jsoncpp/src/lib_json/json_value.cpp
@@ -30,6 +33,8 @@ set ( ThirdParty_SRCS
         yaml-cpp/src/exceptions.cpp
         yaml-cpp/src/memory.cpp
         yaml-cpp/src/node_data.cpp
+
+
         lcm/src/channel_port_map_update_t.c
         lcm/src/channel_to_port_t.c
         lcm/src/eventlog.c
@@ -99,7 +104,7 @@ if(PLATFORM_PI)
 endif()
 
 if(PLATFORM_MRC3588)
-    add_library ( Nav_ThirdParty SHARED ${ThirdParty_SRCS} ${DDS_SRC})
+    add_library ( Nav_ThirdParty SHARED ${ThirdParty_SRCS} ${DDS_SRC} ${DIR_SRCS_YAML})
 endif(PLATFORM_MRC3588)
 
 if(PLATFORM_RK3399)

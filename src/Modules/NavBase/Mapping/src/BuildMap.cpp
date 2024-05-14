@@ -392,12 +392,12 @@ int CBuildMap::SaveProbGridMap(const string filename,map<int,mapping::CStepData>
              }
              if(m==1)
              {
-                 pProbMaps[m] = CreateProbabilityGridFromFile("xialaser.txt"); //???
+                 pProbMaps[m] = CreateProbabilityGridFromFile("bottomProbMap.txt"); //???
 
-                 std::cout<<"read xialaser.txt over"<<std::endl;
+                 std::cout<<"read bottomProbMap.txt over"<<std::endl;
                  if(pProbMaps[m]==nullptr)
                  {
-                      std::cout<<"read xialaser.txt nullptr"<<std::endl;
+                      std::cout<<"read bottomProbMap.txt nullptr"<<std::endl;
                      pProbMaps[m] = common::make_unique<mapping::ProbabilityGrid>(MapLimits(resolution, max.x(),max.y(),CellLimits(num_x,num_y)));
 
                  }
@@ -540,7 +540,7 @@ int CBuildMap::SaveProbGridMap(const string filename,map<int,mapping::CStepData>
         }
         else if(m==1)
         {
-             result = pProbMaps[m]->saveMap("xialaser.txt");   //????
+             result = pProbMaps[m]->saveMap("bottomProbMap.txt");   //????
              pProbMaps[0]->MergePgm(std::move(pProbMaps[1]));
         }
      }

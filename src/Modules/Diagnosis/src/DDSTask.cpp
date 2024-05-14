@@ -515,10 +515,7 @@ void DDSTask::DDSSendLocalizationMsg()
             float a = m_dStartTheta + j*angular_increment;
 
             float r = pCloud->distance[j];
-            // 过虑掉不满足可视角度的点
-            if(!scan->parm->m_AppAngleRange.Contain(a)){
-                r = 0.0;
-            }
+
             r = r/1000.f;
 
             float pCloudToCenterX = 0.0f;
@@ -546,6 +543,8 @@ void DDSTask::DDSSendLocalizationMsg()
 
             }
 
+
+
             float pCloudX = r * (float)cos(a);
             float pCloudY = r * (float)sin(a);
 
@@ -557,6 +556,14 @@ void DDSTask::DDSSendLocalizationMsg()
             pCloudToCenterX = installX + pCloudX * (float)cos(installTheta) - pCloudY * (float)sin(installTheta);
             pCloudToCenterY = installY + pCloudX * (float)sin(installTheta) + pCloudY * (float)cos(installTheta) ;
             pCloudToCenterTheta = a + installTheta;
+
+            // 过虑掉不满足可视角度的点
+            if(!scan->parm->m_AppAngleRange.Contain(a)){
+                pCloudToCenterX = 0.0;
+                pCloudToCenterY = 0.0;
+                pCloudToCenterTheta = 0;
+            }
+
 
             PoseDDS pose;
             pose.x(pCloudToCenterX);

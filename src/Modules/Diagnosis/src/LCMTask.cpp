@@ -15,6 +15,10 @@
 
 #include "LaserAutoMapping.h"
 
+#include "LocalizeFactory.h"
+
+#include "yaml.h"
+
 #pragma GCC push_options
 #pragma GCC optimize ("O0")
 
@@ -255,6 +259,447 @@ bool DeleteArea ( double topLeft_x, double topLeft_y, double downRight_x, double
 
     return true;
 }
+
+
+//dq 同时删除多个区域
+
+bool DeleteProbMapMultipleAreas(std::string filename, int8_t *iparams, double *dparams)
+{
+
+
+    // 打开地图
+    ifstream infile;
+    infile.open ( filename, ios::in );
+    if ( !infile ) {
+        printf ( "infile open failed !\n" );
+        return false;
+    }
+
+    double  range;
+    double  resolution;
+    int     nwidth;
+    int     nheight;
+    double  meterPer;
+    double  origin_position_x;
+    double  origin_position_y;
+    bool    is_map_data_valid = true;
+    double topLeft_x = 0;
+    double downRight_x = 0;
+    double downRight_y = 0;
+    double topLeft_y = 0;
+
+    infile >> range;               // 未使用
+    infile >> resolution;          // 分辨率
+    infile >> nheight;              // 高度
+    infile >> nwidth;               // 宽度
+    infile >> meterPer;             // 分辨率
+    infile >> origin_position_x;    // 左下角 x
+    infile >> origin_position_y;    // 左下角 y
+
+    if ( nheight <= 0 || nwidth <= 0 || meterPer < 0.01 )
+    {
+        printf ( "ERR: Wrong Map File Format" );
+        return false;
+    }
+    std::cout<<"nheight: "<<nheight<<", nwidth: "<<nwidth<<std::endl;
+    //int *mapData = new int [ nheight * nwidth ];    // 地图数据
+    vector<int> mapData;
+    mapData.resize(nheight * nwidth+100);
+    int row      = 0;                               // 地图行下标
+    int col      = 0;                               // 地图列下标
+    // 读取地图数据
+    while ( !infile.eof() )
+    {
+        int data;
+
+        infile >> data;
+
+        mapData [row * nwidth + col] = data;
+
+        col++;
+        if ( col == nwidth )
+        {
+            col = 0;
+            row++;
+        }
+    }
+
+    infile.close();
+    for(int i = 0; i < iparams[0]; i++)
+    {
+        topLeft_x = dparams[4*i];
+        topLeft_y = dparams[4*i+1];
+        downRight_x = dparams[4*i+2];
+        downRight_y = dparams[4*i+3];
+        int col_min = (topLeft_x   - origin_position_x) / resolution;   // 左上角 x 下标
+        int col_max = (downRight_x - origin_position_x) / resolution;   // 右下角 x 下标
+        int row_min = (downRight_y - origin_position_y) / resolution;   // 右下角 y 下标
+        int row_max = (topLeft_y   - origin_position_y) / resolution;   // 左上角 y 下标
+        printf ( "col_min = %d, col_max = %d, row_min = %d, row_max = %d\n", col_min, col_max, row_min, row_max );
+
+        col_min = max(0,col_min);
+        col_max = min(col_max,nwidth);
+        row_min = max(0,row_min);
+        row_max = min(row_max,nheight);
+
+        // printf ( "col_min = %d, col_max = %d, row_min = %d, row_max = %d\n", col_min, col_max, row_min, row_max );
+        //  printf ( "col_min = %d, col_max = %d, row_min = %d, row_max = %d\n", col_min, col_max, row_min, row_max );
+
+
+        for ( int y = row_min; y < row_max; y++ )
+            for ( int x = col_min; x < col_max; x++ )
+            {
+                int clear_index = y * nwidth + x;
+                if(clear_index > 0 && clear_index < nheight * nwidth)
+                mapData [y * nwidth + x] = 255; // 将删去区域概率置为255, 显示白色
+            }
+    }
+
+    // 保存地图
+    ofstream outFile;
+    outFile.open ( WORK_PATH"ProbMap.txt", ios::out );
+    if ( !outFile ) {
+        printf ( "outFile open failed !\n" );
+        mapData.clear();
+        return false;
+    }
+
+    outFile << 15;
+    outFile << ' ';
+    outFile << resolution;
+    outFile << ' ';
+    outFile << nheight;
+    outFile << ' ';
+    outFile << nwidth;
+    outFile << ' ';
+    outFile << meterPer;
+    outFile << ' ';
+    outFile << origin_position_x;
+    outFile << ' ';
+    outFile << origin_position_y;
+
+    for ( int i = 0; i < nwidth * nheight; i++)
+    {
+        if ( i % nwidth == 0 )
+        {
+            outFile << std::endl;
+        }
+
+        outFile << mapData[i];
+        outFile << ' ';
+    }
+
+    outFile.close();
+    mapData.clear();
+
+
+
+}
+
+
+bool DeleteMultipleAreas_new ( int8_t *iparams, double *dparams )
+{
+
+#define PGM_VALUE_WHITE 2
+#define PGM_VALUE_BLACK 0
+#define PGM_VALUE_UNKOWN 1
+
+    const char* fileStr = "ProbMap.txt";
+    // 打开地图
+    ifstream infile;
+    infile.open ( WORK_PATH"ProbMap.txt", ios::in );
+    if ( !infile ) {
+        printf ( "infile open failed !\n" );
+        return false;
+    }
+
+
+
+    double  range;
+    double  resolution;
+    int     nwidth;
+    int     nheight;
+    double  meterPer;
+    double  origin_position_x;
+    double  origin_position_y;
+    bool    is_map_data_valid = true;
+    double topLeft_x = 0;
+    double downRight_x = 0;
+    double downRight_y = 0;
+    double topLeft_y = 0;
+
+    infile >> range;               // 未使用
+    infile >> resolution;          // 分辨率
+    infile >> nheight;              // 高度
+    infile >> nwidth;               // 宽度
+    infile >> meterPer;             // 分辨率
+    infile >> origin_position_x;    // 左下角 x
+    infile >> origin_position_y;    // 左下角 y
+
+    if ( nheight <= 0 || nwidth <= 0 || meterPer < 0.01 )
+    {
+        printf ( "ERR: Wrong Map File Format" );
+        return false;
+    }
+    std::cout<<"nheight: "<<nheight<<", nwidth: "<<nwidth<<std::endl;
+    //int *mapData = new int [ nheight * nwidth ];    // 地图数据
+    vector<int> mapData;
+    mapData.resize(nheight * nwidth+100);
+    int row      = 0;                               // 地图行下标
+    int col      = 0;                               // 地图列下标
+    // 读取地图数据
+    while ( !infile.eof() )
+    {
+        int data;
+
+        infile >> data;
+
+        mapData [row * nwidth + col] = data;
+
+        col++;
+        if ( col == nwidth )
+        {
+            col = 0;
+            row++;
+        }
+    }
+
+    infile.close();
+
+
+
+
+
+
+    string CostNameTemp = SHAREFILES_PATH"PM.yaml";
+
+    if (access(CostNameTemp.c_str(), F_OK) == 0)
+    {
+//        printf("1.txt exists.\n");
+    }
+    else
+    {
+        printf("PM.yaml no exists.\n");
+        std::cout<<CostNameTemp<<" no exists"<<std::endl;
+        return false;
+    }
+
+    YAML::Node Node = YAML::LoadFile(CostNameTemp);
+    std::string PgmName = Node["image"].as<string>();
+    std::vector<double> points =  Node["origin"].as<std::vector<double>>();
+    float resoution = Node["resolution"].as<float>();
+    float occupied_thresh = Node["occupied_thresh"].as<float>();
+    float free_thresh = Node["free_thresh"].as<float>();
+    int   negate = Node["negate"].as<float>();
+
+    // image 文件读入数据
+    std::ifstream infilePgm;
+
+
+    string PgmNameTemp =SHAREFILES_PATH"PM.pgm";
+    std::string strTail = PgmName.substr(PgmName.find('.')+1,PgmName.size());
+
+     int  num_of_rows = 0, num_of_cols = 0;
+     double x0 = 0;
+     double y0 = 0;
+
+     if(strTail != "pgm")
+         return false;
+
+
+
+          infilePgm.open(PgmNameTemp,ios::in);
+          //判断是否打开
+          if (!infilePgm.is_open())
+          {
+            std::cout << "open file error" << std::endl;
+            return false;
+          }
+          std::string inputLine;
+          std::getline(infilePgm, inputLine);
+          if(inputLine != "P2")
+          {
+            cout << "pgm Version not p2, is : " << inputLine << endl;
+            return false;
+          }
+          else
+          {
+            //cout << "Version : " << inputLine << endl;
+          }
+
+          stringstream ss;
+
+          ss << infilePgm.rdbuf();   //read the third line : width and height
+          ss >> num_of_cols >> num_of_rows;
+          //cout << num_of_cols << " columns and " << num_of_rows << " rows" << endl;
+          int iGridValue = -1;//灰度的可能最大值 maximum intensity value
+          ss >> iGridValue;
+
+
+          x0 = points.at(0);
+          y0 = points.at(1);
+
+          std::vector<int>  onerow;
+          std::vector<std::vector<int>>  allrow;
+          onerow.clear();
+          allrow.clear();
+          for (int row = 0; row <  num_of_rows; row++)
+          {
+             onerow.clear();
+             for(int col = 0; col < num_of_cols ; col++)
+             {
+                 int iValue;
+                 ss >> iValue;
+                 onerow.push_back(iValue);
+
+             }
+             allrow.push_back(onerow);
+          }
+          infilePgm.close();
+
+
+
+    // 删除区域
+    std::cout<<"<<<<<<<<<<<<<<<<删除区域>>>>>>>>>>>>>>>>"<<std::endl;
+    for(int i = 0; i < iparams[0]; i++)
+    {
+        topLeft_x = dparams[4*i];
+        topLeft_y = dparams[4*i+1];
+        downRight_x = dparams[4*i+2];
+        downRight_y = dparams[4*i+3];
+        int col_min = (topLeft_x   - origin_position_x) / resolution;   // 左上角 x 下标
+        int col_max = (downRight_x - origin_position_x) / resolution;   // 右下角 x 下标
+        int row_min = (downRight_y - origin_position_y) / resolution;   // 右下角 y 下标
+        int row_max = (topLeft_y   - origin_position_y) / resolution;   // 左上角 y 下标
+        printf ( "col_min = %d, col_max = %d, row_min = %d, row_max = %d\n", col_min, col_max, row_min, row_max );
+
+        col_min = max(0,col_min);
+        col_max = min(col_max,nwidth);
+        row_min = max(0,row_min);
+        row_max = min(row_max,nheight);
+
+        // printf ( "col_min = %d, col_max = %d, row_min = %d, row_max = %d\n", col_min, col_max, row_min, row_max );
+        //  printf ( "col_min = %d, col_max = %d, row_min = %d, row_max = %d\n", col_min, col_max, row_min, row_max );
+
+
+        for ( int y = row_min; y < row_max; y++ )
+            for ( int x = col_min; x < col_max; x++ )
+            {
+                int clear_index = y * nwidth + x;
+                if(clear_index > 0 && clear_index < nheight * nwidth)
+                mapData [y * nwidth + x] = 255; // 将删去区域概率置为255, 显示白色
+            }
+
+
+        col_min = (topLeft_x   - x0) / resolution;   // 左上角 x 下标
+        col_max = (downRight_x - x0) / resolution;   // 右下角 x 下标
+        row_min = (downRight_y - y0) / resolution;   // 右下角 y 下标
+        row_max = (topLeft_y   - y0) / resolution;   // 左上角 y 下标
+        printf ( "col_min = %d, col_max = %d, row_min = %d, row_max = %d\n", col_min, col_max, row_min, row_max );
+
+        col_min = max(0,col_min);
+        col_max = min(col_max,num_of_cols);
+        row_min = max(0,row_min);
+        row_max = min(row_max,num_of_rows);
+
+
+            for (int row = num_of_rows - row_max ; row <  num_of_rows - row_min; row++)
+            {
+                for(int col = col_min; col < col_max; col++)
+                {
+                    if(allrow.at(row).at(col) == PGM_VALUE_BLACK ||
+                            allrow.at(row).at(col) == PGM_VALUE_UNKOWN)
+                        allrow.at(row).at(col) = PGM_VALUE_WHITE;
+                }
+            }
+
+
+
+    }
+    // 保存地图
+    ofstream outFile;
+    outFile.open ( WORK_PATH"ProbMap.txt", ios::out );
+    if ( !outFile ) {
+        printf ( "outFile open failed !\n" );
+        mapData.clear();
+        return false;
+    }
+
+    outFile << 15;
+    outFile << ' ';
+    outFile << resolution;
+    outFile << ' ';
+    outFile << nheight;
+    outFile << ' ';
+    outFile << nwidth;
+    outFile << ' ';
+    outFile << meterPer;
+    outFile << ' ';
+    outFile << origin_position_x;
+    outFile << ' ';
+    outFile << origin_position_y;
+
+    for ( int i = 0; i < nwidth * nheight; i++)
+    {
+        if ( i % nwidth == 0 )
+        {
+            outFile << std::endl;
+        }
+
+        outFile << mapData[i];
+        outFile << ' ';
+    }
+
+    outFile.close();
+    mapData.clear();
+
+
+    //string strBottomfile = WORK_PATH"bottomProbMap.txt";
+    //DeleteProbMapMultipleAreas(strBottomfile, iparams, dparams);
+
+    ofstream offile_p;
+    string str_p = SHAREFILES_PATH"PM.pgm";
+
+    offile_p.open(str_p,ios::out);
+
+    if(!offile_p )
+    {
+        return false;
+    }
+    else
+    {
+        offile_p<<"P2\n";
+        offile_p<<num_of_cols<<" "<<num_of_rows<<std::endl;
+        offile_p<<"2\n";
+
+
+        for (int row = 0; row <  num_of_rows; row++)
+        {
+
+           for(int col = 0; col < num_of_cols ; col++)
+           {
+               offile_p<<(int)allrow.at(row).at(col)<<" ";
+
+               //offile_p<<PGM_VALUE_BLACK<<" ";
+
+
+           }
+           offile_p<<std::endl;
+        }
+
+     }
+     allrow.clear();
+
+     offile_p.close();
+
+
+
+
+    return true;
+}
+
+
+
 
 //dq 同时删除多个区域
 bool DeleteMultipleAreas ( int8_t *iparams, double *dparams )
@@ -735,7 +1180,7 @@ void PadMsgHandle_new ( const lcm_recv_buf_t *rbuf, const char *channel,
         case 10: // pad删除多区域
             if ( PadControlData -> niparams > 0 && PadControlData -> iparams[0] > 0) {
                 std::cout<<"MultipleAreas have been recieved!!!  Num: "<<PadControlData -> niparams<<", "<< PadControlData -> iparams[0] <<std::endl;
-                lcmResult = DeleteMultipleAreas(PadControlData -> iparams, PadControlData -> dparams);
+                lcmResult = DeleteMultipleAreas_new(PadControlData -> iparams, PadControlData -> dparams);
 
                 if ( lcmResult == true ) {
                     LCMTask::GetLcmInstance().SendNaviCommandEx ( 52, 1 );  // pad删除区域应答
@@ -963,8 +1408,34 @@ void PadMsgHandle_new ( const lcm_recv_buf_t *rbuf, const char *channel,
                          std::cout<<"PAD answer"<<std::endl;
                     }
                 }
+            } 
+            break;
+
+            case 35:   // camera
+            {
+                 if ( PadControlData ->niparams== 1)
+                {
+                    if(PadControlData ->iparams[0] == 1)  //begin camera
+                    {
+                        auto pLocalize = LocalizeFactorySingleton::GetInstance();
+                        if(pLocalize)
+                        {
+                            int res = pLocalize->StartRecordImage();
+
+                            LCMTask::GetLcmInstance().SendRecImgRes(1, res);
+
+                        }
+                    }
+                    if(PadControlData ->iparams[0] == 2)   //stop camera
+                    {
+                        auto pLocalize = LocalizeFactorySingleton::GetInstance();
+                        int res = pLocalize->StopRecordImage();
+                        LCMTask::GetLcmInstance().SendRecImgRes(2, res);
+                    }
+                }
             }
             break;
+
 
     }
 #endif
@@ -2130,9 +2601,20 @@ void LCMTask::SendHeart ()
     switch ( workMode )
     {
         case RLP_MODE_LOCALIZATION:     // RLP_MODE_LOCALIZATION = 3
+        {
             i_params[0] = 1;
             i_params[1] = 3;
+
+            auto pLocalize = LocalizeFactorySingleton::GetInstance();
+            if(pLocalize)
+            {
+                if(pLocalize->IsRecordingImage())
+                    i_params[1] = 10;
+            }
+         }
+
             break;
+
 
         case RLP_MODE_AUTOMAPPING:      // RLP_MODE_AUTOMAPPING = 5
          {
@@ -2575,5 +3057,60 @@ bool LCMTask::SendLoadPbResult(int res, vector<int>& submapids)
 
 #endif
 }
+
+void LCMTask::SendRecImgRes(int mode, int res)
+{
+
+    robot_control_t_new  cmd;
+
+    int8_t iparams[2];
+
+    iparams[0] = mode;
+    iparams[1] = res;
+
+
+    cmd.commandid = 64;
+    cmd.ndparams = 0;
+    cmd.niparams = 2;
+    cmd.iparams = iparams;
+    cmd.nsparams = 0;
+    cmd.nbparams = 0;
+
+    robot_control_t_new_publish(lcm, "NAVI_UI_COMMAND", &cmd);
+}
+
+void LCMTask::SendImageIndex(int index)
+{
+
+    std::cout<<"      SendImageIndex      "<< index<<std::endl;
+
+    robot_control_t_new  cmd;
+
+    int8_t iparams[1];
+        iparams[0] = index;
+
+
+    cmd.commandid = 1;
+    cmd.ndparams = 0;
+    cmd.niparams = 1;
+    cmd.iparams = iparams;
+    cmd.nsparams = 0;
+    cmd.nbparams = 0;
+
+    robot_control_t_new_publish(lcm, "RECORD_IMAGE", &cmd);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #pragma GCC pop_options

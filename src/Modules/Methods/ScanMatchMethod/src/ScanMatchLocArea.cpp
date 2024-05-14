@@ -19,6 +19,9 @@ CScanMatchParam::CScanMatchParam()
     m_reloc_linearSearchWindow =  2;     // 重定位分支限界距离搜索范围
     m_reloc_angularSearchWindow = 60.0*PI/180.0;;    // 重定位分支限界角度搜索范围
 
+    m_topVisionMode = 0;
+
+
 
 }
 
@@ -40,16 +43,24 @@ bool CScanMatchParam::LoadBinary(FILE *fp)
     if (fread(&m, sizeof(int), 1, fp) != 1)
         return false;
     //m_bUseSingleFeature = (bool)m;
-    m_localMode = (int)m;
+
+
+    m_localMode = (int)(m%10) ;
+
+    m_topVisionMode = (m- m_localMode)/10;
+
     return true;
 }
 
 bool CScanMatchParam::SaveBinary(FILE *fp)
 {
-    //int m = m_bUseSingleFeature;
-    int m = m_localMode;
+
+    int m = m_localMode+m_topVisionMode*10;
+
     if (fwrite(&m, sizeof(int), 1, fp) != 1)
         return false;
+
+
     return true;
 }
 

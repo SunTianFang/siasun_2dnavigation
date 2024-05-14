@@ -156,9 +156,9 @@ void wj_716N_lidar_protocol::analysisTimeStamp(unsigned char *data)
        unsigned long int timeStamp = GetTickCount();
        int64_t delta = m_synctime - timeStamp;
        //int64_t delta = timeStamp - m_nSyncTime;
-#ifdef USE_BLACK_BOX
-            FILE_BlackBox(LocBox, "NTPToUTC : ",static_cast<double>(res),"，m_diffvalue ：",static_cast<double>(m_diffvalue),",timeStamp : ",static_cast<double>(timeStamp));
-#endif
+//#ifdef USE_BLACK_BOX
+//            FILE_BlackBox(LocBox, "NTPToUTC : ",static_cast<double>(res),"，m_diffvalue ：",static_cast<double>(m_diffvalue),",timeStamp : ",static_cast<double>(timeStamp));
+//#endif
        //abs(delta) < 1000
        if(abs(delta) < 2000)
        {

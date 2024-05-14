@@ -93,6 +93,9 @@ public:
 
     bool SendBottomLaserPoindCloud(CPosture robotPosture,const ndt_oru::CStampedPointCloud &cloudIn);
 
+    void SendImageIndex(int index);
+
+    void SendRecImgRes(int mode,int res);
 
 protected:
     virtual void SupportRoutineProxy();

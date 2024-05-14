@@ -30,6 +30,7 @@ class CLaserScannerParam
     bool m_bUseLocalize;          // 是否利用此扫描器定位(仅用于RoboMapping软件中)
     bool m_bVisible;              // 是否显示其点云(仅用于RoboMapping软件中)
     int  criteritonThreshold;    // 反光板识别强度门限  默认值(倍加福R2000:700；Hokuyo：7000；SickNano：254)
+    bool g_bLaserUnInverted;        // 激光雷达是否倒装
   public:
     CLaserScannerParam();
 

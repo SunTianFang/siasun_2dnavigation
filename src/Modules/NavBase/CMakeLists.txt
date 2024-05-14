@@ -186,7 +186,8 @@ set ( NavBase_SRCS
 	LaserSensor/src/SickSafetyLaserScanner.cpp
         LaserSensor/src/FRR2LaserScanner.cpp
         LaserSensor/src/LeimouF30LaserScanner.cpp
-	LaserSensor/src/BlueSeaLaser.cpp
+        LaserSensor/src/BlueSeaLaser50c.cpp
+        LaserSensor/src/BlueSeaLaserE320.cpp
 	LaserSensor/src/laser_t.c
 	Network/src/Base/Channel.cpp
 	Network/src/Base/CSocket.cpp
@@ -215,6 +216,7 @@ set ( NavBase_SRCS
 	Mapping/src/SendMap.cpp
 	Mapping/src/BuildMap.cpp
         Mapping/src/Calibrate.cpp
+        Mapping/src/RecTopvisionImage.cpp
 	LaserSensor/src/WJ716LaserScanner.cpp
 	LaserSensor/src/WJ719LaserScanner.cpp
 	CanDev/src/CanOpen/rsp/vcil/bus_msg_handler.cpp
