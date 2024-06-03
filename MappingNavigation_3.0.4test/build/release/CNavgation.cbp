@@ -1,0 +1,2336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="CNavgation"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\Modules\;CMake Files\src\Modules\ThirdParty\;CMake Files\src\Modules\Tools\;CMake Files\src\Modules\Geometry\;CMake Files\src\Modules\Csm\;CMake Files\src\Modules\Scan\;CMake Files\src\Modules\NavBase\;CMake Files\src\Modules\Methods\;CMake Files\src\Modules\Diagnosis\;CMake Files\src\Modules\SoftPls\;CMake Files\src\App\;CMake Files\src\App\NavApp\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v all"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v rebuild_cache"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v edit_cache"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Nav_ThirdParty">
+				<Option output="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/release/libNav_ThirdParty.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/src/Modules/ThirdParty"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add option="-D_LINUX64"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/jsoncpp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/jsoncpp"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/jsoncpp/src/lib_json"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/include/yaml-cpp/node"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/include/yaml-cpp/node/detail"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/include/yaml-cpp"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/include/yaml-cpp/contrib"/>
+					<Add directory="/opt/Mrc3588/glib/include/glib-2.0"/>
+					<Add directory="/opt/Mrc3588/glib/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/./DDS/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Diagnosis/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Scan/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Geometry/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Csm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Csm/include/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Csm/src/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/eigen3"/>
+					<Add directory="/opt/Mrc3588/sysrootnew/usr/local/include"/>
+					<Add directory="/opt/Mrc3588/boost/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v Nav_ThirdParty"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Nav_ThirdParty/fast">
+				<Option output="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/release/libNav_ThirdParty.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/src/Modules/ThirdParty"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add option="-D_LINUX64"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/jsoncpp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/jsoncpp"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/jsoncpp/src/lib_json"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/include/yaml-cpp/node"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/include/yaml-cpp/node/detail"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/include/yaml-cpp"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/include/yaml-cpp/contrib"/>
+					<Add directory="/opt/Mrc3588/glib/include/glib-2.0"/>
+					<Add directory="/opt/Mrc3588/glib/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/./DDS/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Diagnosis/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Scan/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Geometry/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Csm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Csm/include/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/../Csm/src/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/eigen3"/>
+					<Add directory="/opt/Mrc3588/sysrootnew/usr/local/include"/>
+					<Add directory="/opt/Mrc3588/boost/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v Nav_ThirdParty/fast"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tools">
+				<Option output="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/release/libTools.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/src/Modules/Tools"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add option="-D_LINUX64"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Tools/../Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Tools/../Geometry/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Tools/include/RK3399"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v Tools"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Tools/fast">
+				<Option output="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/release/libTools.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/src/Modules/Tools"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add option="-D_LINUX64"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Tools/../Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Tools/../Geometry/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Tools/include/RK3399"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v Tools/fast"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Geometry">
+				<Option output="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/release/libGeometry.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/src/Modules/Geometry"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/../Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/../ThirdParty/eigen3"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v Geometry"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Geometry/fast">
+				<Option output="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/release/libGeometry.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/src/Modules/Geometry"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/../Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/../ThirdParty/eigen3"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v Geometry/fast"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Csm">
+				<Option output="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/release/libCsm.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/src/Modules/Csm"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add option="-D_LINUX64"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/include/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/../Geometry/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/../Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/../ThirdParty/eigen3"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/../Scan/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/../NavBase/Protocol/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/../NavBase/BlackBox/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/../NavBase/Mapping/include"/>
+					<Add directory="/opt/Mrc3588/pcl/include/pcl-1.11"/>
+					<Add directory="/opt/Mrc3588/boost/include"/>
+					<Add directory="/opt/Mrc3588/pcl/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v Csm"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Csm/fast">
+				<Option output="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/release/libCsm.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/src/Modules/Csm"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add option="-D_LINUX64"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/include/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/../Geometry/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/../Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/../ThirdParty/eigen3"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/../Scan/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/../NavBase/Protocol/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/../NavBase/BlackBox/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/../NavBase/Mapping/include"/>
+					<Add directory="/opt/Mrc3588/pcl/include/pcl-1.11"/>
+					<Add directory="/opt/Mrc3588/boost/include"/>
+					<Add directory="/opt/Mrc3588/pcl/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v Csm/fast"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Scan">
+				<Option output="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/release/libScan.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/src/Modules/Scan"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/../Scan/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/../Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/../Geometry/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/../Csm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/../Csm/include/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/../Csm/src"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/../Csm/src/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/../ThirdParty/eigen3"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/../ThirdParty/jsoncpp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/../ThirdParty/yaml-cpp/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v Scan"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Scan/fast">
+				<Option output="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/release/libScan.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/src/Modules/Scan"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/../Scan/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/../Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/../Geometry/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/../Csm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/../Csm/include/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/../Csm/src"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/../Csm/src/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/../ThirdParty/eigen3"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/../ThirdParty/jsoncpp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/../ThirdParty/yaml-cpp/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v Scan/fast"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="NavBase">
+				<Option output="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/release/libNavBase.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/src/Modules/NavBase"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add option="-D_LINUX64"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/BlackBox/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/pf_r2000/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/pf_r2000/include/pepperl_fuchs_r2000"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/fr_R2/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/fr_R2/include/pepperl_fuchs_r2000_fr"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Hokuyo_uam05lp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/WJ/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Leimou_f30/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/BlueSea/sdk"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/BlueSea/sdk/service"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserSensor/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Network/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Protocol/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Mapping/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../ThirdParty/eigen3"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Csm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Csm/include/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Csm/src"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Csm/src/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Ndt/ndt_oru/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Common/Platform/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../../lib/Navigation/Slam/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Ndt/ndt_fuser/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Methods/Manager/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Methods/NdtMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Methods/FeatureMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Methods/TemplateMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Methods/FastMatchMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Feature/FeatureObject/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Methods/SlamMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../World/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Feature/FeatureMatch/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../../App/NavApp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../ThirdParty/jsoncpp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../ThirdParty/lcm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Geometry/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Scan/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Carto"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Carto/transform/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Carto/sensor/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Carto/common/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Diagnosis/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Carto/mapping/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Carto/myceres/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../NavBase/Mapping/include"/>
+					<Add directory="/opt/Mrc3588/pcl/include/pcl-1.11"/>
+					<Add directory="/opt/Mrc3588/boost/include"/>
+					<Add directory="/opt/Mrc3588/pcl/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../../Modules/ThirdParty/yaml-cpp/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v NavBase"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="NavBase/fast">
+				<Option output="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/release/libNavBase.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/src/Modules/NavBase"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add option="-D_LINUX64"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/BlackBox/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/pf_r2000/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/pf_r2000/include/pepperl_fuchs_r2000"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/fr_R2/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/fr_R2/include/pepperl_fuchs_r2000_fr"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Hokuyo_uam05lp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/WJ/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Leimou_f30/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/BlueSea/sdk"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/BlueSea/sdk/service"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserSensor/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Network/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Protocol/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Mapping/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../ThirdParty/eigen3"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Csm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Csm/include/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Csm/src"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Csm/src/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Ndt/ndt_oru/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Common/Platform/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../../lib/Navigation/Slam/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Ndt/ndt_fuser/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Methods/Manager/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Methods/NdtMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Methods/FeatureMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Methods/TemplateMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Methods/FastMatchMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Feature/FeatureObject/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Methods/SlamMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../World/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Feature/FeatureMatch/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../../App/NavApp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../ThirdParty/jsoncpp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../ThirdParty/lcm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Geometry/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Scan/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Carto"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Carto/transform/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Carto/sensor/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Carto/common/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Diagnosis/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Carto/mapping/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../Carto/myceres/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../NavBase/Mapping/include"/>
+					<Add directory="/opt/Mrc3588/pcl/include/pcl-1.11"/>
+					<Add directory="/opt/Mrc3588/boost/include"/>
+					<Add directory="/opt/Mrc3588/pcl/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/../../Modules/ThirdParty/yaml-cpp/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v NavBase/fast"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Methods">
+				<Option output="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/release/libMethods.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/src/Modules/Methods"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add option="-D_LINUX64"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Geometry/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Scan/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Csm/include/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Csm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Csm/src/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Feature/FeatureObject/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Feature/FeatureMatch/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../World/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../../lib/MiniEigen/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../../lib/Navigation/Slam/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../../Modules/Common/Platform/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Ndt/ndt_oru/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Ndt/ndt_fuser/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/NdtMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/FeatureMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/TemplateMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/FastMatchMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/ScanMatchMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/Manager/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../ThirdParty/eigen3"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../ThirdParty/jsoncpp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../ThirdParty/lcm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../../App/NavApp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Carto/transform/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Carto/sensor/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Carto/common/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Carto/mapping/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Carto/myceres/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../NavBase/Protocol/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../NavBase/BlackBox/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../NavBase/Mapping/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Diagnosis/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../NavBase/Network/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/SlamMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Carto"/>
+					<Add directory="/opt/Mrc3588/pcl/include/pcl-1.11"/>
+					<Add directory="/opt/Mrc3588/boost/include"/>
+					<Add directory="/opt/Mrc3588/pcl/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../../Modules/ThirdParty/yaml-cpp/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v Methods"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Methods/fast">
+				<Option output="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/release/libMethods.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/src/Modules/Methods"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add option="-D_LINUX64"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Geometry/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Scan/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Csm/include/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Csm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Csm/src/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Feature/FeatureObject/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Feature/FeatureMatch/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../World/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../../lib/MiniEigen/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../../lib/Navigation/Slam/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../../Modules/Common/Platform/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Ndt/ndt_oru/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Ndt/ndt_fuser/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/NdtMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/FeatureMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/TemplateMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/FastMatchMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/ScanMatchMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/Manager/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../ThirdParty/eigen3"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../ThirdParty/jsoncpp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../ThirdParty/lcm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../../App/NavApp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Carto/transform/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Carto/sensor/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Carto/common/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Carto/mapping/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Carto/myceres/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../NavBase/Protocol/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../NavBase/BlackBox/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../NavBase/Mapping/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Diagnosis/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../NavBase/Network/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/SlamMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../Carto"/>
+					<Add directory="/opt/Mrc3588/pcl/include/pcl-1.11"/>
+					<Add directory="/opt/Mrc3588/boost/include"/>
+					<Add directory="/opt/Mrc3588/pcl/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/../../Modules/ThirdParty/yaml-cpp/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v Methods/fast"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Diagnosis">
+				<Option output="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/release/libDiagnosis.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/src/Modules/Diagnosis"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DMG_ENABLE_HTTP_STREAMING_MULTIPART"/>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add option="-D_LINUX64"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Geometry/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../World/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Ndt/ndt_oru/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Ndt/ndt_fuser/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Common/Platform/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Scan/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Methods/Manager/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Methods/NdtMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Methods/FeatureMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Methods/TemplateMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Methods/SlamMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../../lib/Navigation/Slam/include"/>
+					<Add directory="/src/WebtoolServer"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../../App/NavApp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Csm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Csm/include/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Csm/src/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Methods/FastMatchMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../ThirdParty/eigen3"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Carto"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Carto/mapping/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Carto/common/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Carto/transform/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Carto/sensor/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Carto/myceres/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/Mapping/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/Protocol/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/BlackBox/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/Network/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/LaserSensor/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/LaserDrivers/pf_r2000/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/LaserDrivers/fr_R2/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/LaserDrivers/Hokuyo_uam05lp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/LaserDrivers/Sick_nanoScan3/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/LaserDrivers/WJ/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/LaserDrivers/Leimou_f30/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/LaserDrivers/BlueSea/sdk"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/LaserDrivers/BlueSea/sdk/service"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Feature/FeatureObject/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Feature/FeatureMatch/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../ThirdParty/jsoncpp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../ThirdParty/lcm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../ThirdParty/DDS/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../ThirdParty/yaml-cpp/include/yaml-cpp"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../ThirdParty/yaml-cpp/include"/>
+					<Add directory="/opt/Mrc3588/pcl/include/pcl-1.11"/>
+					<Add directory="/opt/Mrc3588/boost/include"/>
+					<Add directory="/opt/Mrc3588/pcl/include"/>
+					<Add directory="/opt/Mrc3588/sysrootnew/usr/local/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v Diagnosis"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Diagnosis/fast">
+				<Option output="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/release/libDiagnosis.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/src/Modules/Diagnosis"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DMG_ENABLE_HTTP_STREAMING_MULTIPART"/>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add option="-D_LINUX64"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Geometry/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../World/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Ndt/ndt_oru/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Ndt/ndt_fuser/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Common/Platform/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Scan/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Methods/Manager/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Methods/NdtMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Methods/FeatureMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Methods/TemplateMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Methods/SlamMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../../lib/Navigation/Slam/include"/>
+					<Add directory="/src/WebtoolServer"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../../App/NavApp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Csm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Csm/include/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Csm/src/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Methods/FastMatchMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../ThirdParty/eigen3"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Carto"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Carto/mapping/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Carto/common/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Carto/transform/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Carto/sensor/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Carto/myceres/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/Mapping/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/Protocol/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/BlackBox/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/Network/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/LaserSensor/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/LaserDrivers/pf_r2000/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/LaserDrivers/fr_R2/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/LaserDrivers/Hokuyo_uam05lp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/LaserDrivers/Sick_nanoScan3/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/LaserDrivers/WJ/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/LaserDrivers/Leimou_f30/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/LaserDrivers/BlueSea/sdk"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../NavBase/LaserDrivers/BlueSea/sdk/service"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Feature/FeatureObject/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../Feature/FeatureMatch/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../ThirdParty/jsoncpp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../ThirdParty/lcm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../ThirdParty/DDS/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../ThirdParty/yaml-cpp/include/yaml-cpp"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/../ThirdParty/yaml-cpp/include"/>
+					<Add directory="/opt/Mrc3588/pcl/include/pcl-1.11"/>
+					<Add directory="/opt/Mrc3588/boost/include"/>
+					<Add directory="/opt/Mrc3588/pcl/include"/>
+					<Add directory="/opt/Mrc3588/sysrootnew/usr/local/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v Diagnosis/fast"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SoftPls">
+				<Option output="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/release/libSoftPls.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/src/Modules/SoftPls"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add option="-D_LINUX64"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Scan/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Geometry/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Csm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Csm/include/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Csm/src"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Csm/src/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../ThirdParty/eigen3"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Carto/mapping/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Carto/common/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Carto/transform/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Carto/sensor/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/Mapping/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/Protocol/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/BlackBox/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/Network/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/LaserSensor/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/LaserDrivers/pf_r2000/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/LaserDrivers/fr_R2/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/LaserDrivers/Hokuyo_uam05lp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/LaserDrivers/Sick_nanoScan3/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/LaserDrivers/WJ/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/LaserDrivers/Leimou_f30/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/LaserDrivers/BlueSea/sdk"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/LaserDrivers/BlueSea/sdk/service"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Feature/FeatureObject/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Feature/FeatureMatch/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../ThirdParty/jsoncpp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../ThirdParty/lcm/include"/>
+					<Add directory="/opt/Mrc3588/pcl/include/pcl-1.11"/>
+					<Add directory="/opt/Mrc3588/boost/include"/>
+					<Add directory="/opt/Mrc3588/pcl/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../../Modules/ThirdParty/yaml-cpp/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v SoftPls"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SoftPls/fast">
+				<Option output="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/release/libSoftPls.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/src/Modules/SoftPls"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add option="-D_LINUX64"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Scan/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Geometry/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Csm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Csm/include/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Csm/src"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Csm/src/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../ThirdParty/eigen3"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Carto/mapping/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Carto/common/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Carto/transform/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Carto/sensor/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/Mapping/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/Protocol/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/BlackBox/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/Network/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/LaserSensor/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/LaserDrivers/pf_r2000/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/LaserDrivers/fr_R2/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/LaserDrivers/Hokuyo_uam05lp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/LaserDrivers/Sick_nanoScan3/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/LaserDrivers/WJ/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/LaserDrivers/Leimou_f30/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/LaserDrivers/BlueSea/sdk"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../NavBase/LaserDrivers/BlueSea/sdk/service"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Feature/FeatureObject/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../Feature/FeatureMatch/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../ThirdParty/jsoncpp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../ThirdParty/lcm/include"/>
+					<Add directory="/opt/Mrc3588/pcl/include/pcl-1.11"/>
+					<Add directory="/opt/Mrc3588/boost/include"/>
+					<Add directory="/opt/Mrc3588/pcl/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/../../Modules/ThirdParty/yaml-cpp/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v SoftPls/fast"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="robo_localization">
+				<Option output="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/release/robo_localization" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="../../../release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add option="-D_LINUX64"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../../BuildInclude"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Geometry/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Traj/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/World/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Feature/FeatureObject/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Feature/FeatureMatch/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Csm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Csm/include/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Csm/src/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Ndt/ndt_oru/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Ndt/ndt_omp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Ndt/interface/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Ndt/ndt_fuser/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Common/Platform/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Scan/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Diagnosis/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Methods/Manager/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Methods/NdtMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Methods/FeatureMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Methods/TemplateMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Methods/FastMatchMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Methods/ScanMatchMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Methods/SlamMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../ModulesModules/Editable/Feature/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Editable/Methods/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Editable/StaticObjs/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Editable/Manager/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../lib/Navigation/Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../lib/Navigation/Slam/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/SoftPls/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/Protocol/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/Mapping/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/LaserSensor/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/BlackBox/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/CanDev/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Diagnosis/src/WebtoolServer"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/ThirdParty/eigen3"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Carto"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Carto/mapping/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Carto/common/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Carto/transform/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Carto/sensor/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Carto/myceres/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/Network/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/LaserDrivers/pf_r2000/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/LaserDrivers/fr_R2/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/LaserDrivers/Hokuyo_uam05lp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/LaserDrivers/Sick_nanoScan3/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/CanDev/src/CanOpen/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/LaserDrivers/WJ/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/LaserDrivers/Leimou_f30/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/LaserDrivers/BlueSea/sdk"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/LaserDrivers/BlueSea/sdk/service"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/ThirdParty/jsoncpp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/ThirdParty/lcm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Csm/src"/>
+					<Add directory="/opt/Mrc3588/pcl/include/pcl-1.11"/>
+					<Add directory="/opt/Mrc3588/boost/include"/>
+					<Add directory="/opt/Mrc3588/pcl/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/ThirdParty/yaml-cpp/include"/>
+					<Add directory="/opt/Mrc3588/glib/include/glib-2.0"/>
+					<Add directory="/opt/Mrc3588/glib/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/ThirdParty/DDS/include"/>
+					<Add directory="/opt/Mrc3588/sysrootnew/usr/local/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v robo_localization"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="robo_localization/fast">
+				<Option output="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/build/release/release/robo_localization" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="../../../release"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-D_RK3588_LINUX64"/>
+					<Add option="-DNAV_APP"/>
+					<Add option="-D_LINUX64"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../../BuildInclude"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Geometry/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Traj/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/World/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Feature/FeatureObject/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Feature/FeatureMatch/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Csm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Csm/include/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Csm/src/csm"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Ndt/ndt_oru/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Ndt/ndt_omp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Ndt/interface/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Ndt/ndt_fuser/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Common/Platform/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Scan/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Diagnosis/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Methods/Manager/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Methods/NdtMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Methods/FeatureMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Methods/TemplateMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Methods/FastMatchMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Methods/ScanMatchMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Methods/SlamMethod/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../ModulesModules/Editable/Feature/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Editable/Methods/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Editable/StaticObjs/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Editable/Manager/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../lib/Navigation/Tools/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../lib/Navigation/Slam/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/SoftPls/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/Protocol/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/Mapping/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/LaserSensor/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/BlackBox/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/CanDev/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Diagnosis/src/WebtoolServer"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/ThirdParty/eigen3"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Carto"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Carto/mapping/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Carto/common/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Carto/transform/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Carto/sensor/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Carto/myceres/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/Network/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/LaserDrivers/pf_r2000/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/LaserDrivers/fr_R2/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/LaserDrivers/Hokuyo_uam05lp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/LaserDrivers/Sick_nanoScan3/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/CanDev/src/CanOpen/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/LaserDrivers/WJ/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/LaserDrivers/Leimou_f30/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/LaserDrivers/BlueSea/sdk"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/NavBase/LaserDrivers/BlueSea/sdk/service"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/ThirdParty/jsoncpp/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/ThirdParty/lcm/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/Csm/src"/>
+					<Add directory="/opt/Mrc3588/pcl/include/pcl-1.11"/>
+					<Add directory="/opt/Mrc3588/boost/include"/>
+					<Add directory="/opt/Mrc3588/pcl/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/ThirdParty/yaml-cpp/include"/>
+					<Add directory="/opt/Mrc3588/glib/include/glib-2.0"/>
+					<Add directory="/opt/Mrc3588/glib/include"/>
+					<Add directory="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/../../Modules/ThirdParty/DDS/include"/>
+					<Add directory="/opt/Mrc3588/sysrootnew/usr/local/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/aarch64-linux-gnu"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include/c++/7.5.0/backward"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/include-fixed"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../lib/gcc/aarch64-linux-gnu/7.5.0/../../../../aarch64-linux-gnu/include"/>
+					<Add directory="/opt/Mrc3588/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/bin/../aarch64-linux-gnu/libc/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/ninja -v robo_localization/fast"/>
+					<CompileFile command="/usr/bin/ninja -v &quot;$file&quot;"/>
+					<Clean command="/usr/bin/ninja -v clean"/>
+					<DistClean command="/usr/bin/ninja -v clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/src/LocalizeFactory.cpp">
+			<Option target="robo_localization"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/src/RoboManager.cpp">
+			<Option target="robo_localization"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/src/main.cpp">
+			<Option target="robo_localization"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src/csm/CorrList.cpp">
+			<Option target="Csm"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src/csm/CsmMatcher.cpp">
+			<Option target="Csm"/>
+			<Option target="robo_localization"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src/csm/CsmScan.cpp">
+			<Option target="Csm"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src/csm/fastMatcher.cpp">
+			<Option target="Csm"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src/csm/math_utils.cpp">
+			<Option target="Csm"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src/csm/math_utils.h">
+			<Option target="Csm"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src/csm/math_utils_gsl.cpp">
+			<Option target="Csm"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src/csm/math_utils_gsl.h">
+			<Option target="Csm"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src/egsl/egsl.cpp">
+			<Option target="Csm"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src/egsl/egsl.h">
+			<Option target="Csm"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src/egsl/egsl_conversions.cpp">
+			<Option target="Csm"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src/egsl/egsl_misc.cpp">
+			<Option target="Csm"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src/egsl/egsl_ops.cpp">
+			<Option target="Csm"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src/gpc/gpc.cpp">
+			<Option target="Csm"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src/gpc/gpc.h">
+			<Option target="Csm"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src/gpc/gpc_utils.cpp">
+			<Option target="Csm"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/src/gpc/gpc_utils.h">
+			<Option target="Csm"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/DDSTask.cpp">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/Diagnosis.cpp">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/FeatureMatchInfoLcm_.c">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/LCMTask.cpp">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/LcmCloudAdjusted.c">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/LocalizationTest_Msg.c">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/Localization_Msg.c">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/apimanager.cpp">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/apimanager.h">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/archive/ctrlsetting.cpp">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/archive/ctrlsetting.h">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/archive/datadxlaserparm.cpp">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/archive/datadxlaserparm.h">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/archive/datadxscandata.cpp">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/archive/datadxscandata.h">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/archive/datafinishrecorddx.cpp">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/archive/datafinishrecorddx.h">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/archive/datalocation.cpp">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/archive/datalocation.h">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/archive/dataparm.cpp">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/archive/dataparm.h">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/archive/datapcloud.cpp">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/archive/datapcloud.h">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/archive/datasetting.cpp">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/archive/datasetting.h">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/archive/datastartrecorddx.cpp">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/archive/datastartrecorddx.h">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/ctrlapi.cpp">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/ctrlapi.h">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/dataapi.cpp">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/dataapi.h">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/downloadapi.cpp">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/api/downloadapi.h">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/mongoose/mongoose.c">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/mongoose/mongoose.h">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/server/httpServer.cpp">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/WebtoolServer/server/httpServer.h">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/robot_control_t.c">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/src/robot_control_t_new.c">
+			<Option target="Diagnosis"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/AffinePosture.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/Angle.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/AppArea.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/Arc.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/Bezier.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/Circle.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/DataRange.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/Direct.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/Ellipse.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/Frame.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/Line.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/LineBase.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/MatchInfo.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/MultiSegLine.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/NewCurve.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/Pnt.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/PolyRegion.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/Posture.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/Rectangle.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/Scp.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/ScrnRef.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/Spline.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/Spp.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/src/Transfor.cpp">
+			<Option target="Geometry"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/FastMatchMethod/src/FastMatchMethod.cpp">
+			<Option target="Methods"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/FeatureMethod/src/FeatureLocArea.cpp">
+			<Option target="Methods"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/FeatureMethod/src/FeatureLocalization.cpp">
+			<Option target="Methods"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/FeatureMethod/src/FeatureMethod.cpp">
+			<Option target="Methods"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/FeatureMethod/src/FeatureScan.cpp">
+			<Option target="Methods"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/Manager/src/LocalizationManager.cpp">
+			<Option target="Methods"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/Manager/src/LocalizationMethods.cpp">
+			<Option target="Methods"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/Manager/src/LocalizationPlan.cpp">
+			<Option target="Methods"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/NdtMethod/src/NdtLocArea.cpp">
+			<Option target="Methods"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/NdtMethod/src/NdtMethod.cpp">
+			<Option target="Methods"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/ScanMatchMethod/src/ScanMatchLocArea.cpp">
+			<Option target="Methods"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/ScanMatchMethod/src/ScanMatchMethod.cpp">
+			<Option target="Methods"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/SlamMethod/src/SlamLocArea.cpp">
+			<Option target="Methods"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/SlamMethod/src/SlamMethod.cpp">
+			<Option target="Methods"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/TemplateMethod/src/TemplateLocArea.cpp">
+			<Option target="Methods"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/TemplateMethod/src/TemplateMethod.cpp">
+			<Option target="Methods"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/BlackBox/src/BlackBox.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/BlackBox/src/MemFileMap.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/BlackBox/src/ShareMem.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanGyro.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanMan.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/CanChannel.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/SocketCanLib/libsocketcan.c">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/rsp_dev_adv_e3845/mapping_file_opt.c">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/rsp_dev_adv_e3845/mapping_file_opt.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/rsp_dev_adv_e3845/rsp_canDev_vcil.c">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/rsp_dev_adv_e3845/rsp_clockDev_hpet.c">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/rsp_dev_adv_e3845/rsp_dev_stub.c">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/rsp_dev_adv_e3845/rsp_feram_mmap.c">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/rsp_dev_adv_e3845/rsp_gpio.c">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/rsp_dev_adv_e3845/rsp_gpio.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/rsp_dev_adv_e3845/rsp_uartDev.c">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/rsp_dev_adv_e3845/rsp_uartDev.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/DebugLog.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/DebugLog.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/bus_msg_handler.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/bus_msg_handler.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/can.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/can.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/cmd_handler.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/cmd_handler.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/common.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/common.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/j1939.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/j1939.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/obd2.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/obd2.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/susi_api_mgr.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/vcil_cmd.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/vcil_cmd.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/vcil_ctx.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/vcil_ctx.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/vcil_mgr.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/vcil_mgr.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/vcil_port.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/vcil_port.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/vmsg.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CanDev/src/CanOpen/rsp/vcil/vmsg.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/BlueSea/sdk/Global.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/BlueSea/sdk/Global.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/BlueSea/sdk/LidarDataProcess.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/BlueSea/sdk/LidarDataProcess.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/BlueSea/sdk/service/LidarCheckService.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/BlueSea/sdk/service/LidarCheckService.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/BlueSea/sdk/standard_interface.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/BlueSea/sdk/standard_interface.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/BlueSea/sdk/uart.c">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Hokuyo_uam05lp/samples/cpp/Connection_information.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Hokuyo_uam05lp/src/Urg_driver.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Hokuyo_uam05lp/src/ticks.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Hokuyo_uam05lp/src/urg_connection.c">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Hokuyo_uam05lp/src/urg_debug.c">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Hokuyo_uam05lp/src/urg_ring_buffer.c">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Hokuyo_uam05lp/src/urg_sensor.c">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Hokuyo_uam05lp/src/urg_serial.c">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Hokuyo_uam05lp/src/urg_serial_utils.c">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Hokuyo_uam05lp/src/urg_tcpclient.c">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Hokuyo_uam05lp/src/urg_utils.c">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Leimou_f30/src/leimou_f30_driver.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/SickSafetyscannersBase.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/ApplicationNameVariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/ChangeCommSettingsCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/CloseSession.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/Cola2Session.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/Command.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/ConfigMetadataVariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/CreateSession.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/DeviceNameVariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/DeviceStatusVariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/FieldGeometryVariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/FieldHeaderVariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/FieldSetsVariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/FindMeCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/FirmwareVersionVariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/LatestTelegramVariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/MeasurementCurrentConfigVariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/MeasurementPersistentConfigVariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/MethodCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/MonitoringCaseTableHeaderVariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/MonitoringCaseVariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/OrderNumberVariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/ProjectNameVariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/RequiredUserActionVariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/SerialNumberVariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/StatusOverviewVariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/TypeCodeVariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/UserNameVariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/cola2/VariableCommand.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/communication/AsyncTCPClient.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/communication/AsyncUDPClient.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseApplicationData.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseApplicationNameData.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseConfigMetadata.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseData.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseDataHeader.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseDatagramHeader.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseDerivedValues.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseDeviceName.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseDeviceStatus.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseFieldGeometryData.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseFieldHeaderData.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseFieldSetsData.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseFirmwareVersion.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseGeneralSystemState.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseIntrusionData.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseMeasurementCurrentConfigData.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseMeasurementData.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseMeasurementPersistentConfigData.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseMonitoringCaseData.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseOrderNumber.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseProjectName.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseRequiredUserAction.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseSerialNumber.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseStatusOverview.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseTCPPacket.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseTypeCodeData.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/ParseUserNameData.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/TCPPacketMerger.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/data_processing/UDPPacketMerger.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/ApplicationData.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/ApplicationInputs.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/ApplicationName.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/ApplicationOutputs.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/CommSettings.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/ConfigData.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/ConfigMetadata.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/Data.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/DataHeader.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/DatagramHeader.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/DerivedValues.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/DeviceName.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/DeviceStatus.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/FieldData.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/FieldSets.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/FirmwareVersion.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/GeneralSystemState.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/IntrusionData.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/IntrusionDatum.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/LatestTelegram.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/MeasurementData.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/MonitoringCaseData.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/OrderNumber.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/PacketBuffer.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/ParsedPacketBuffer.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/ProjectName.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/RequiredUserAction.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/ScanPoint.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/SerialNumber.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/StatusOverview.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/TypeCode.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/Sick_nanoScan3/src/datastructure/UserName.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/WJ/src/async_client.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/WJ/src/wj_716N_lidar_protocol.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/WJ/src/wj_719_lidar_protocol.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/fr_R2/src/http_command_interface_fr.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/fr_R2/src/r2000_driver_fr.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/fr_R2/src/scan_data_receiver_fr.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/fr_R2/src/scan_data_receiver_fr.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/pf_r2000/src/http_command_interface.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/pf_r2000/src/r2000_driver.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/pf_r2000/src/scan_data_receiver.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserDrivers/pf_r2000/src/scan_data_receiver.h">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserSensor/src/BlueSeaLaser50c.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserSensor/src/BlueSeaLaserE320.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserSensor/src/FRR2LaserScanner.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserSensor/src/HokuyoLaserScanner.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserSensor/src/LeimouF30LaserScanner.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserSensor/src/PfR2000LaserScanner.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserSensor/src/RangeScanner.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserSensor/src/SensorFamily.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserSensor/src/Sick581LaserScanner.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserSensor/src/SickSafetyLaserScanner.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserSensor/src/WJ716LaserScanner.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserSensor/src/WJ719LaserScanner.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/LaserSensor/src/laser_t.c">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Mapping/src/BaseOdometry.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Mapping/src/BuildMap.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Mapping/src/Calibrate.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Mapping/src/LaserAutoMapping.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Mapping/src/LaserMapping.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Mapping/src/LaserOdometry.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Mapping/src/RawMap.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Mapping/src/RecTopvisionImage.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Mapping/src/SendMap.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Network/src/Base/CSocket.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Network/src/Base/Channel.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Network/src/Base/FrmChan.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Network/src/Base/TcpChannel.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Network/src/Base/TcpSock.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Network/src/Base/TimeOutSock.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Network/src/Base/UdpChannel.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Network/src/Base/UdpSock.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Network/src/Client/AgvUdpSock.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Network/src/Client/ClntChannel.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Network/src/Server/LstnSock.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Network/src/Server/TcpSrvChannel.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Network/src/Server/TcpSrvCom.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Network/src/Server/UdpSrvCom.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Protocol/src/AutoOutPutBlackBox.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Protocol/src/CPing.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Protocol/src/ParameterObject.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Protocol/src/RoboLocClnt.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Protocol/src/RoboLocProto.cpp">
+			<Option target="NavBase"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/Protocol/src/httpcommunicationglobaldata.cpp">
+			<Option target="robo_localization"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/src/BasObject.cpp">
+			<Option target="Scan"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/src/CircleElement.cpp">
+			<Option target="Scan"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/src/LineElement.cpp">
+			<Option target="Scan"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/src/LiveObjects.cpp">
+			<Option target="Scan"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/src/RawScan.cpp">
+			<Option target="Scan"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/src/Scan.cpp">
+			<Option target="Scan"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/src/ScanPointCloud.cpp">
+			<Option target="Scan"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/src/ScannerParam.cpp">
+			<Option target="Scan"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/src/StaticObjects.cpp">
+			<Option target="Scan"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/src/StockedObjects.cpp">
+			<Option target="Scan"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/src/misc.cpp">
+			<Option target="Scan"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/src/AvoidObstacle.cpp">
+			<Option target="SoftPls"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/src/PLS.cpp">
+			<Option target="SoftPls"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/DDS/src/DDS_Data.cxx">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/DDS/src/DDS_DataPubSubTypes.cxx">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/DDS/src/MySubscriber.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/jsoncpp/src/lib_json/json_reader.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/jsoncpp/src/lib_json/json_value.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/jsoncpp/src/lib_json/json_valueiterator.inl">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/jsoncpp/src/lib_json/json_writer.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/channel_port_map_update_t.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/channel_to_port_t.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/eventlog.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/lcm.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/lcm_file.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/lcm_memq.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/lcm_mpudpm.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/lcm_tcpq.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/lcm_udpm.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/ringbuffer.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/lcm/src/udpm_util.c">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/binary.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/convert.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/directives.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/directives.h">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/emit.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/emitfromevents.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/emitter.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/emitterstate.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/emitterstate.h">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/emitterutils.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/emitterutils.h">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/exceptions.cpp">
+			<Option target="Nav_ThirdParty"/>
+			<Option target="Scan"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/exp.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/exp.h">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/memory.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/node.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/node_data.cpp">
+			<Option target="Nav_ThirdParty"/>
+			<Option target="Scan"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/nodebuilder.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/nodebuilder.h">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/nodeevents.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/nodeevents.h">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/null.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/ostream_wrapper.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/parse.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/parser.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/regex_yaml.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/regex_yaml.h">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/scanner.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/scanner.h">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/scanscalar.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/scanscalar.h">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/scantag.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/scantag.h">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/scantoken.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/simplekey.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/singledocparser.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/singledocparser.h">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/stream.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/stream.h">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/tag.cpp">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/yaml-cpp/src/tag.h">
+			<Option target="Nav_ThirdParty"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Tools/src/AbstractParameter.cpp">
+			<Option target="Tools"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Tools/src/Archive.cpp">
+			<Option target="Tools"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Tools/src/Combination.cpp">
+			<Option target="Tools"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Tools/src/Gpio.cpp">
+			<Option target="Tools"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Tools/src/LED.cpp">
+			<Option target="Tools"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Tools/src/Tools.cpp">
+			<Option target="Tools"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Tools/src/WatchDog.cpp">
+			<Option target="Tools"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Tools/src/systemInfo.cpp">
+			<Option target="Tools"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Tools/src/time_patch.cpp">
+			<Option target="Tools"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/ThirdParty/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Modules\ThirdParty\"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Tools/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Modules\Tools\"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Geometry/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Modules\Geometry\"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Csm/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Modules\Csm\"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Scan/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Modules\Scan\"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/NavBase/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Modules\NavBase\"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Methods/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Modules\Methods\"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/Diagnosis/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Modules\Diagnosis\"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/Modules/SoftPls/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\Modules\SoftPls\"/>
+		</Unit>
+		<Unit filename="/home/sft/siasun_2dnavigation/MappingNavigation_3.0.4test/src/App/NavApp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\App\NavApp\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
